@@ -1,6 +1,6 @@
 # Week 2
 
-In the second week, our team researched on possibilities of games in Greenfoot and by mid of the week we decided a layout of the game. I researched into how destruction elements in Level 1 of the game will appear randomly on screen for player to kill them and killing the destruction elements will gain points for the player. Also, I looked into how the health of the player decreases when it gets hit by one of these elements.
+In the second week, our team researched on possibilities of games in Greenfoot and decided a layout for our game. I finalized the destruction objects for Level 1 and have attached their images. I have also defined what changes the destruction elements will cause in the game.
 
 ## XP core value Feedback
 
