@@ -4,7 +4,7 @@ In the second week, our team researched on possibilities of games in Greenfoot a
 
 ## XP core value Feedback
 
-On Saturday my team and I decided to research on game options in Greenfoot. Around mid of the week, we discussed and took feedback from each member as to what they researched and which type of game in Greenfoot is more appropriate for the project. Taking constant feedback from every member helps our team to improve and expedite learning from our past week's experiences.
+On Saturday my team and I decided to research on game options in Greenfoot. Around mid of the week, we discussed and took feedback from each member as to what they researched and which type of game in Greenfoot is more appropriate for the project. Taking constant feedback from every member helped our team to improve and expedite learning from our past week's experiences.
 
 # Week 1
 
