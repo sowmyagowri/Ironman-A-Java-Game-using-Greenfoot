@@ -1,15 +1,10 @@
 # Week 2
 
-In the second week, our team researched on possibilities of games in Greenfoot and by mid of the week we decided a 
-layout of the game. I researched into how destruction elements in Level 1 of the game will appear randomly on screen 
-for player to kill them and killing the destruction elements will gain points for the player. Also, I looked into how 
-the health of the player decreases when it gets hit by one of these elements.
+In the second week, our team researched on possibilities of games in Greenfoot and by mid of the week we decided a layout of the game. I researched into how destruction elements in Level 1 of the game will appear randomly on screen for player to kill them and killing the destruction elements will gain points for the player. Also, I looked into how the health of the player decreases when it gets hit by one of these elements.
 
 ## XP core value Feedback
 
-On Saturday my team and I decided to research on game options in Greenfoot. Around mid of the week, we discussed and 
-took feedback from each member as to what they researched and which type of game in Greenfoot is more appropriate for 
-the project.
+On Saturday my team and I decided to research on game options in Greenfoot. Around mid of the week, we discussed and took feedback from each member as to what they researched and which type of game in Greenfoot is more appropriate for the project. Taking constant feedback from every member helps our team to improve and expedite learning from our past week's experiences.
 
 # Week 1
 
