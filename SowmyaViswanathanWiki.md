@@ -1,3 +1,15 @@
+Week#3
+
+This week, the attributes and methods for the Enemy module at Level 2 was finalised. This helped in deciding the design pattern for this module. Strategy Design pattern fits this module structure and fucntionality. Class diagram for the pattern is being implemented.
+
+XP Core Value: Communication
+
+Week#3
+
+Start of this week, we had a meeting and it was communicated very clearly as to which team member has to work on what section of the project. We discussed on the design patterns and how it had to be implemented for every module. This meeting proved useful to eliminate confusions about the implementation of the design patterns.
+
+
+
 Week#2
 
 The objects/enemies in Level 2 of the game and the corresponding actions which can be performed have been finalized. I have started exploring the design patterns, which will be appropriate for this module.
