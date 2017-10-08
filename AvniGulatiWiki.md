@@ -1,3 +1,11 @@
+# Week 3
+
+In the third week, most of our team finalized the design patterns to be implemented by them. I finalized on classes and functions of destruction elements in Level 1 which helped me decide that Factory Pattern fits my module.
+
+## XP core value Feedback
+
+The team constanly took feedback from each other throughout the week on finalizing the classes and functions of the modules assigned to them. This accelerated the team's performance and most of us could decide upon the design patterns that we will build.
+
 # Week 2
 
 In the second week, our team researched on possibilities of games in Greenfoot and decided a layout for our game. I finalized the destruction objects for Level 1 and have attached their images. I have also defined what changes the destruction elements will cause in the game.
