@@ -1,3 +1,11 @@
+### Week 3 (ending 10/07/2017):
+
+This week, I finalized on the image to be used for the *Hero* of the game after discussing and confirming with the team members. I am currently working on deciding the design pattern, attributes and functions for the actor module.
+
+#### XP core value Simplicity
+
+At the beginning of this week, we had a meeting to decide the project module each team member has to work on. We discussed on the design patterns and how it had to be implemented for every module. Since, the design patterns have been distributed, the complexity of the whole project has been broken down and made simple to work on.
+
 ### Week 2 (ending 09/30/2017):
 
 In the second week, we researched on the various options available in greenfoot and finalized the following:
