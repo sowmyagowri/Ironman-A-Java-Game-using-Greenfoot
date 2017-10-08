@@ -1,3 +1,10 @@
+Week 3 (10/7/2017)
+I finalized the classes and its functions that would be used for Menu,Level 1 and Level 2.
+The command pattern fits well for the Menu GUI where there would be 2 buttons-Play and Help.
+
+Team complied to Build integrity in by choosing small items to be researched on and finishing it without flaws.
+
+
 Week 2 (9/30/2017)
 
 1. I researched about the layout of the background in the game. 
