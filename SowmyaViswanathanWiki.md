@@ -1,3 +1,13 @@
+Week#4
+
+This week, Strategy pattern was finalised and Class Diagram, with the basic important functions implemented in it, which has been attached with the relating issue in the Kanban Board. I have started working on the coding for the different modules. I have also started working on the Individual requirement - 'User Story with BDD Scenarios'. 
+
+XP Core Value: Communication
+
+Week#4
+
+This week, we had a clear picture of what task was assigned for each person. We decided to finish with the Design pattern finalization for various modules and to have class diagram ready. Coding will be started next week.
+
 Week#3
 
 This week, the attributes and methods for the Enemy module at Level 2 was finalised. This helped in deciding the design pattern for this module. Strategy Design pattern fits this module structure and fucntionality. Class diagram for the pattern is being implemented.
