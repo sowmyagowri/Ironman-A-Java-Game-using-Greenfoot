@@ -12,12 +12,30 @@ Week2 (9/30/2017)
 * Uploaded two image files of prototype of a score board
 * Defined the functionality of the score board of the game for level 1 and 2.
 
+Week3 (10/07/2017)
+* Research on the design pattern that would best fit to construct the functionality of the score board for the game is in progress.
+* Observer pattern suits the design for the above said module, but looking into more patterns to confirm it.
+* Once the pattern is decided, design will be created for the module using a UML Class diagram.
+* Sequence diagram for the whole game will be completed next week
+
+Week4 (10/21/2017)
+* Observer pattern has been selected to design the score board for the game for levels 1 & 2.
+* The UML Class diagram for the above said design pattern is attached for reference.
+* Sequence Diagram for the whole game flow is in progress.
+
 Below are the instances that indicate, that the team adopted the 'Eliminate Waste' which is one of the lean core values:
+
 Week1 (09/16/2017)
 1) A meeting between the team members was held to assign tasks to work on for the week, hence eliminating waiting of team members to start working on their respective tasks
 2) Members are assigned the number of tasks in such a way that, over committing to tasks is avoided
+
 Week2 (9/30/2017)
 1) Game components were categorized and divided among team members to design and define the features, so that redundant work was avoided 
 
+Week3 (10/07/2017)
+1) Items are added in the backlog for each module of the game from design to development and is being appropriately assigned to each member to facilitate continuous flow of work in the team hence avoiding unnecessary waiting.
+
+Week4 (10/21/2017)
+1) Through team meeting and effective communication, work items are seamlessly segregated between team members, hence avoiding redundancy (more than one person working on the same module). 
 
 
