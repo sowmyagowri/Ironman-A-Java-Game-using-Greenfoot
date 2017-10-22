@@ -1,3 +1,11 @@
+# Week 4
+
+In fourth week, the entire team created the Class Diagrams of their respective design patterns that they will implement in the game. I constructed class diagram for destruction elements in Level 1 for Factory Pattern.
+
+## XP core value Feedback
+
+Throughout the week, the team worked in short feedback loops for creating Class Diagrams for the design pattern that fits their module. Every team member discussed the dependency on other team member's module and uniformly opted the naming of classes and certain dependent operations.
+
 # Week 3
 
 In the third week, most of our team finalized the design patterns to be implemented by them. I finalized on classes and functions of destruction elements in Level 1 which helped me decide that Factory Pattern fits my module.
