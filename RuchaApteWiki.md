@@ -1,4 +1,10 @@
+Week 4 (10/21/2017)
+1. I have created the class diagram for the Menu(main screen) for the game.
+2. Team took ownership for creating class diagrams for one pattern each thus implementing Build Integrity In value. 
+
+
 Week 3 (10/7/2017)
+
 I finalized the classes and its functions that would be used for Menu,Level 1 and Level 2.
 The command pattern fits well for the Menu GUI where there would be 2 buttons-Play and Help.
 
