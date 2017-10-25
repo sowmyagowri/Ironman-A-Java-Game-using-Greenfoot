@@ -1,3 +1,11 @@
+### Week 4 (ending 10/21/2017):
+
+This week I finalized the GOF pattern for the Actor module as State pattern. Class Diagram was drawn using Astah. I have tried to include as many attribute as I could think of and the basic important functions have also been added. The class diagram has been added to the respective issue in the Project's kanban takboard.
+
+#### XP core value Simplicity
+
+As we completed the analysis and the flow of the game, we designed the Class Diagram this week and I ensured that the designs were simple. Initially while designing the game we discussed about the various different patterns that can be considerd but while implementing we decided on 5 of the GOF patterns based on how each person's functionality can be covered.
+
 ### Week 3 (ending 10/07/2017):
 
 This week, I finalized on the image to be used for the *Hero* of the game after discussing and confirming with the team members. I am currently working on deciding the design pattern, attributes and functions for the actor module.
