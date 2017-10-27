@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Day here.
  * 
- * @author (your name) 
+ * @author (Sowmya Gowrishankar) 
  * @version (a version number or a date)
  */
 public class Scenario extends World
