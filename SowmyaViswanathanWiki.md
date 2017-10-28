@@ -1,3 +1,13 @@
+Week#5
+
+Coding for Enemy Level 2 was started this week. Basic functionalities of the enemy, including moving the enemy, shooting by the enemy and the enemy dying have been implemented. Few bits of code, have been blocked with slight problems, and are under implementation. Strategy Pattern has been implemented partially. 
+
+XP Core Value: Communication
+
+Week#5
+
+In the start of Week 5, we had a meeting to discuss on assigning the tasks for the week. Task = "Coding for individual modules" was decided for every person. We had a stand up meeting mid-week, to discuss on the progress and on any hurdles we are facing. We didnt have any major blockage.  
+
 Week#4
 
 This week, Strategy pattern was finalised and Class Diagram, with the basic important functions implemented in it, which has been attached with the relating issue in the Kanban Board. I have started working on the coding for the different modules. I have also started working on the Individual requirement - 'User Story with BDD Scenarios'. 
