@@ -19,8 +19,8 @@ public class Ironman extends Character
     private int numShots; //Number of shots the player has
     
     private IronmanState hasShotState;
-    private IronmanState noShotState;
-    private IronmanState currentState = noShotState;
+    private IronmanState NoShotState;
+    private IronmanState currentState = NoShotState;
     
     private Observer obs;
 
@@ -43,7 +43,7 @@ public class Ironman extends Character
        points=0;
         
        hasShotState = new HasShotState(this, shotTimer);
-       noShotState = new noShotState(this);
+       NoShotState = new NoShotState(this);
        
        if(numShots > 0){
            this.currentState = hasShotState;
