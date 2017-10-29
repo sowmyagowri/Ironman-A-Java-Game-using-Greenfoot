@@ -8,12 +8,41 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Rocket_Enemy extends Actor
 {
-    /**
-     * Act - do whatever the Rocket_Enemy wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int targetx=0, targety=0,jeda=0;
+    private boolean toRemove=false;
+    public void addedToWorld(World MyWorld)
+    {
+            targetx=getX();
+            targety=getY();
+    }
+    
+    
     public void act() 
     {
-        // Add your action code here.
+         if(Greenfoot.isKeyDown("left"))
+        {
+            
+            move(-3);
+        }
+         if(Greenfoot.isKeyDown("right"))
+        {
+             move(3);
+        }
+        if(Greenfoot.isKeyDown("up"))
+        {
+           int x = getX();
+           int y = getY();
+           int ny  = getY()-3;
+           setLocation(x,ny) ;
+        }
+         if(Greenfoot.isKeyDown("down"))
+        {
+               int x = getX();
+               int y = getY();
+               int ny = getY()+3;
+               setLocation(x,ny) ;
+        }
+        if(jeda>0) jeda--;
+        if(jeda==0) jeda=50;
     }    
 }
