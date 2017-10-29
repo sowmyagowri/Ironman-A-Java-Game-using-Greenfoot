@@ -1,3 +1,8 @@
+Week 5 (10/28/2017)
+1. I have started coding the main game menu. I have added the background music and the image and added buttons for start and help in the game.
+2. Team ccomplied to Build Integrity in as they are writing code that is helping the game evolve successfully.
+
+
 Week 4 (10/21/2017)
 1. I have created the class diagram for the Menu(main screen) for the game.
 2. Team took ownership for creating class diagrams for one pattern each thus implementing Build Integrity In value. 
