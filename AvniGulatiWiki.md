@@ -1,3 +1,12 @@
+
+# Week 5
+
+In fifth week, the team started coding their respective modules. I coded the destruction elements in Level 1 and added classes and methods for the same.
+
+## XP core value Feedback
+
+Throughout the week, the team coded their modules by taking feedback from each team member so that the code can be integrated in the coming week. This helped in expediting the development of the game. 
+
 # Week 4
 
 In fourth week, the entire team created the Class Diagrams of their respective design patterns that they will implement in the game. I constructed class diagram for destruction elements in Level 1 for Factory Pattern.
