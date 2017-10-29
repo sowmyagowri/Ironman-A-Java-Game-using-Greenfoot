@@ -1,3 +1,11 @@
+### Week 5 (ending 10/28/2017):
+
+This week, I started coding for the actor in both Levels 1 & 2. Various functionalities that were implemented were act, move and attack. The setter and the getter functions were also implemented. State Pattern has been implemented by creating two states for the actor class "Ironman".
+
+#### XP core value Simplicity
+
+As we have started to code the modules according to the finalized patterns, we discussed and made sure the code is simple and the functionalities implemented can be clearly understood by implementing each action in its own specific function.
+
 ### Week 4 (ending 10/21/2017):
 
 This week I finalized the GOF pattern for the Actor module as State pattern. Class Diagram was drawn using Astah. I have tried to include as many attribute as I could think of and the basic important functions have also been added. The class diagram has been added to the respective issue in the Project's kanban takboard.
