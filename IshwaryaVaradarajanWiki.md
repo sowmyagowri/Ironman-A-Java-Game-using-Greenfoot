@@ -23,6 +23,12 @@ Week4 (10/21/2017)
 * The UML Class diagram for the above said design pattern is attached for reference.
 * Sequence Diagram for the whole game flow is in progress.
 
+Week5 (10/28/2017)
+* Construction of code for score board funtionality is in progress. 
+  a)Completed build of score keeping for the player when attacking enemy objects. Testing in progress.
+  b)Construction of tracking player's lives when player is hit by the enemy/enemy objects is in progress.
+* Sequence Diagram for the whole game flow is in progress.
+
 Below are the instances that indicate, that the team adopted the 'Eliminate Waste' which is one of the lean core values:
 
 Week1 (09/16/2017)
@@ -38,4 +44,5 @@ Week3 (10/07/2017)
 Week4 (10/21/2017)
 1) Through team meeting and effective communication, work items are seamlessly segregated between team members, hence avoiding redundancy (more than one person working on the same module). 
 
-
+Week5 (10/28/2017)
+1) Consrtuction of individual components are in progress as planned. Developer wait time is eliminated by segregating backlog items well before the start of the construction phase.
