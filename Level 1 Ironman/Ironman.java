@@ -19,10 +19,10 @@ public class Ironman extends Character
     private int numShots; //Number of shots the player has
     
     private IronmanState hasShotState;
-    private IronmanState NoShotState;
-    private IronmanState currentState = NoShotState;
+    private IronmanState noShotState;
+    private IronmanState currentState = noShotState;
     
-    private Observer obs;
+    private Observer observer;
 
     /**
      * Ironman builder class. Ironman images are loaded, variable life, health, and points are initialized. Attacks sounds are loaded.
@@ -42,8 +42,8 @@ public class Ironman extends Character
        numShots = 30;
        points=0;
         
-       hasShotState = new HasShotState(this, shotTimer);
-       NoShotState = new NoShotState(this);
+       hasShotState = new hasShotState(this,shotTimer);
+       noShotState = new noShotState(this);
        
        if(numShots > 0){
            this.currentState = hasShotState;
@@ -89,6 +89,7 @@ public class Ironman extends Character
                 this.setLocation(this.getX(), this.getY() + 5);
         }
     }
+    
     /**
      * When the player presses the spacebar, "Ironman" will launch a shot. 
      * Each shot has a delay of 250 milliseconds.
@@ -194,9 +195,9 @@ public class Ironman extends Character
         notifyObservers();
     }
     
-    public void notifyObservers(){
-       
-        obs.updatePoints(points); 
+    public void notifyObservers()
+    {
+       observer.updatePoints(points); 
     }
     
     /**
@@ -206,6 +207,16 @@ public class Ironman extends Character
     {
         lives++;
     }
+    
+    public void setcurrentState(IronmanState state) {
+        this.currentState = state;
+    }
+    
+    public IronmanState getnoShotState(){
+        return this.noShotState;
+    }
+    
+    public IronmanState getHasShotState(){
+        return this.hasShotState;
+    }
 }
-
-
