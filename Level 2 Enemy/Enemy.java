@@ -11,10 +11,11 @@ public class Enemy extends Actor
 {
    
     private int targetx=0, targety=0,jeda=0;
-    public static int dir=0,lives=5;
-    private int vx=1;
+    public static int dir=0;
+    private int vx=1,lives=50,x,y;
     public boolean toRemove=false;
-    //MainEnemy em=null;
+    //MainEnemy em=null
+    
     public void checkwalls()
     {
             if(isAtEdge()&&dir==0)
@@ -36,23 +37,21 @@ public class Enemy extends Actor
         getWorld().addObject(new B(),getX(),getY());
         //System.out.println(lives);
         //Enemylives liv = (Enemylives)(getWorld().getObjects(Enemylives.class).get(0));
-        lives--;
-        //System.out.println(lives);
-        if(lives==0)
+        remEnemy();
+        if(getLives()==0)
         toRemove=true;
         else
-        if(lives==1)
         toRemove=false;
-        else
-        if(lives==2)
-        toRemove=false;
-        else
-        if(lives==3)
-        toRemove=false;
-        else
-        if(lives==4)
-        toRemove=false;
-        
+       
+    }
+    public void remEnemy()
+    {
+        lives--;
+    }
+    public int getLives()
+    {
+      
+        return lives;
     }
     
     public void move()
@@ -67,9 +66,17 @@ public class Enemy extends Actor
         setLocation(getX(),getY()-vx);
         checkwalls();
     }
-    if(jeda>0) jeda--;
+    Enemy e=this;
+    World world=getWorld();
+    Strategy s2 = new Object2();
+    Strategy s3 = new Object3();
+    s2.setSuccessor(s3);
+
+
+        if(jeda>0) jeda--;
         if(jeda%150==140) getWorld().addObject(new Fire(), getX(),getY());
-        if(jeda%150==80) getWorld().addObject(new Context(new Object2()), getX(),getY());
+        if(jeda%150==80) { s2.setObject(world,e);
+        s2.fly("ob2",world, e); }
         if(jeda==0) jeda=150;
     }
     public void act() 
@@ -77,7 +84,6 @@ public class Enemy extends Actor
         
         if(!toRemove) move();
         else
-        if(toRemove)
         getWorld().removeObject(this);
         
         

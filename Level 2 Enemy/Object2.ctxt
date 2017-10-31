@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Object2
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Object2\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=s
+comment2.target=void\ setSuccessor(Strategy)
+comment3.params=w\ e
+comment3.target=void\ setObject(greenfoot.World,\ Enemy)
+comment4.params=f\ w\ e
+comment4.target=void\ fly(java.lang.String,\ greenfoot.World,\ Enemy)
+numComments=5
