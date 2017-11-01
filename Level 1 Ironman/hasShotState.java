@@ -25,7 +25,7 @@ public class hasShotState implements IronmanState
         int shot = heroObject.getNumShots()-1;
         heroObject.setNumShots(shot);
         if(heroObject.getNumShots() == 0){
-            heroObject.currentState(heroObject.getnoShotState());
+            heroObject.setCurrentState(heroObject.getnoShotState());
         }
         shotTimer.shot();
     }

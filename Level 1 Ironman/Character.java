@@ -8,12 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Character extends Actor
 {
-    protected SimpleTimer shotTimer;
+    protected simpleTimer shotTimer;
    
     public Character()
     {
-        shotTimer = new SimpleTimer();  
-        shotTimer.mark();
+        shotTimer = new simpleTimer();  
+        shotTimer.shot();
     }
     
     /**

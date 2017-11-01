@@ -208,7 +208,29 @@ public class Ironman extends Character
         lives++;
     }
     
-    public void setcurrentState(IronmanState state) {
+    /**
+     * Randomly generated bonus throughout the game.
+     */
+    public void generateBonus()
+    {
+        if(numShots < 15)
+        {
+            if(Greenfoot.getRandomNumber(5000) < 20)
+            {
+                getWorld().addObject( new bonusShots(),
+                Greenfoot.getRandomNumber(1000), Greenfoot.getRandomNumber(500));
+            }
+        }
+        
+        if(Greenfoot.getRandomNumber(18000) < 5 && lives<5)
+        {
+            getWorld().addObject( new bonusLife(), 
+            Greenfoot.getRandomNumber(1000), Greenfoot.getRandomNumber(500));
+        }
+        
+    }
+    
+    public void setCurrentState(IronmanState state) {
         this.currentState = state;
     }
     
@@ -216,7 +238,7 @@ public class Ironman extends Character
         return this.noShotState;
     }
     
-    public IronmanState getHasShotState(){
+    public IronmanState gethasShotState(){
         return this.hasShotState;
     }
 }
