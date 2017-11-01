@@ -1,43 +1,27 @@
 import greenfoot.*; 
-/**
- * Write a description of class Object2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Object2 extends Actor implements Strategy 
+public class Object2 extends Actor implements Handler 
 {
-    // instance variables - replace the example below with your own
-    
     private boolean toRemove=false;
     private int vx=3;
-    private Strategy successor=null;
-    //Enemy en;
-    Object2 ob=this;
+    private Handler successor=null;
+    
     public void act() 
     {
-       
+       move(-vx);
     }   
-    public void setSuccessor(Strategy s)
+    public void setSuccessor(Handler s)
     {
         this.successor = s;
     }
-    public void setObject(World w, Enemy e)
+    public void setObject(World w, Enemy e,String str)
     {
-        w.addObject(new Object2(), e.getX(),e.getY());
-        this.setLocation(e.getX()-vx,e.getY());
-        
-    }
-    public void fly(String f,World w, Enemy e)
-    {
-        if(!toRemove)
+        if(str=="OBJECT2")
         {
-            ob.setLocation(e.getX()-vx,e.getY());
-            if(e.getX()>w.getWidth()) toRemove=true;
-        }else
-        {
-            w.removeObject(this);
+            w.addObject(new Object2(), e.getX(),e.getY());
+            this.setLocation(e.getX()-vx,e.getY());
         }
-       
+        else
+            successor.setObject(w,e,str);
     }
+    
 }

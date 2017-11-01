@@ -1,48 +1,31 @@
 import greenfoot.*;
-import java.util.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Enemy here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.util.*; 
 public class Enemy extends Actor
 {
    
-    private int targetx=0, targety=0,jeda=0;
+    private int targetx=0, targety=0,counter=0,vx=1,lives=50;
     public static int dir=0;
-    private int vx=1,lives=50,x,y;
     public boolean toRemove=false;
-    //MainEnemy em=null
     
     public void checkwalls()
     {
             if(isAtEdge()&&dir==0)
               {
                   setLocation(getX(),getY()-50);
-                  dir=1;
-                  
-                }
-                if(isAtEdge()&&dir==1)
-              {
+                  dir=1;                  
+              }
+            if(isAtEdge()&&dir==1)
+            {
                   setLocation(getX(),getY()+50);
-                  dir=0;
-                  
-                }
-            
+                  dir=0;                  
+            }
     }
     public void destroy()
     {
         getWorld().addObject(new B(),getX(),getY());
-        //System.out.println(lives);
-        //Enemylives liv = (Enemylives)(getWorld().getObjects(Enemylives.class).get(0));
         remEnemy();
-        if(getLives()==0)
-        toRemove=true;
-        else
-        toRemove=false;
-       
+        if(getLives()==0) toRemove=true;
+        else toRemove=false;       
     }
     public void remEnemy()
     {
@@ -50,14 +33,13 @@ public class Enemy extends Actor
     }
     public int getLives()
     {
-      
-        return lives;
+      return lives;
     }
     
     public void move()
     {
-        if(dir==0)
-        {
+    if(dir==0)
+    {
         setLocation(getX(),getY()+vx);
         checkwalls();
     }
@@ -66,27 +48,29 @@ public class Enemy extends Actor
         setLocation(getX(),getY()-vx);
         checkwalls();
     }
-    Enemy e=this;
-    World world=getWorld();
-    Strategy s2 = new Object2();
-    Strategy s3 = new Object3();
-    s2.setSuccessor(s3);
-
-
-        if(jeda>0) jeda--;
-        if(jeda%150==140) getWorld().addObject(new Fire(), getX(),getY());
-        if(jeda%150==80) { s2.setObject(world,e);
-        s2.fly("ob2",world, e); }
-        if(jeda==0) jeda=150;
+        Enemy e=this;
+        World world=getWorld();
+    
+        Handler s1 = new Object1();
+        Handler s2 = new Object2();
+        Handler s3 = new Object3();
+    
+        s1.setSuccessor(s2);
+        s2.setSuccessor(s3);
+    
+        if(counter>0) counter--;
+        if(counter%170==169) { s1.setObject(world,e,"OBJECT1"); }
+        if(counter%170==110) { s1.setObject(world,e,"OBJECT2"); }
+        if(counter%170==40) { s1.setObject(world,e,"OBJECT3"); }
+        if(counter==0) counter=170;
     }
     public void act() 
     {
         
-        if(!toRemove) move();
+        if(!toRemove) 
+            move();
         else
-        getWorld().removeObject(this);
-        
-        
+            getWorld().removeObject(this);
         
     }    
 }
