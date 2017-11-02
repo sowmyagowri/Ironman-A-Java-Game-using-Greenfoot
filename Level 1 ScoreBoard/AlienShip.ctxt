@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=AlienShip
+comment0.text=\n\ Write\ a\ description\ of\ class\ Objects\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=sb
+comment1.target=AlienShip(ScoreBoard)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ shoot()
+comment4.params=
+comment4.target=void\ destroyShip()
+comment5.params=
+comment5.target=void\ updateScore()
+numComments=6
