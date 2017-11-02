@@ -14,6 +14,12 @@ public class Object3 extends Actor implements Handler
     public void act() 
     {
        move(-vx);
+       Actor actor=getOneIntersectingObject(Fighter.class);
+       if(actor!=null)
+       {
+           getWorld().addObject(new B(),getX(),getY());
+           getWorld().removeObject(actor);
+       }
     }   
     public void setSuccessor(Handler s)
     {
