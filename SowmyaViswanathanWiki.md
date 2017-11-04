@@ -1,3 +1,13 @@
+Week#6
+
+Design Pattern was changed to CHain of Responsibility pattern for the Level 2 Enemy module as it fit the requirements better. The design pattern has been implemented and the code has been uploaded in the github. Started working on the BDD scenarios.
+
+XP Core Value: Communication
+
+Week#6
+
+In the start of Week 6, we had a meeting to discuss if we were on the right track in constructing design patterns. We were in constant touch through group chats on how much progress everyone has had. We did not have any major blockage this week. 
+
 Week#5
 
 Coding for Enemy Level 2 was started this week. Basic functionalities of the enemy, including moving the enemy, shooting by the enemy and the enemy dying have been implemented. Few bits of code, have been blocked with slight problems, and are under implementation. Strategy Pattern has been implemented partially. 
