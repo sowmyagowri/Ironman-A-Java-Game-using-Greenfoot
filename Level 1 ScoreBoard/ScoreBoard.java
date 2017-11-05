@@ -9,23 +9,15 @@ import java.util.ArrayList;
 public class ScoreBoard extends Actor implements Game
 {
     private ArrayList<GameObservers> observers = new ArrayList<GameObservers>();
+    private GreenfootImage counter;
     private static int numIronManlives = 3;
     private static int alienShipsHit = 0;
-    private static String state = "Initial";
+    private static int alienSoldiersHit = 0;
+    private String state = "Initial";
     
     public ScoreBoard()
     {
-        GreenfootImage score = new GreenfootImage(300, 30);
-        score.drawString("Score : " +  alienShipsHit + "   Lives :" + numIronManlives, 5, 25);
-        setImage(score);
-    }
-    
-    public void displayScore()
-    {
-        GreenfootImage changeScore = getImage();
-        changeScore.clear();
-        changeScore.drawString("Score : " +  alienShipsHit + "   Lives :" + numIronManlives, 5, 25);
-        setImage(changeScore);
+        counter = getImage();
     }
     
     public String getState()
@@ -48,9 +40,20 @@ public class ScoreBoard extends Actor implements Game
         alienShipsHit++;
     }
     
+    public void set_alienSoldierHitCount()
+    {
+        alienSoldiersHit++;
+    }
+    
+    public int get_alienSoldierHitCount()
+    {
+        return alienSoldiersHit;
+    }
+    
     public void set_numIronManlives()
     {
-        numIronManlives--;
+       System.out.println(numIronManlives);
+       numIronManlives =  numIronManlives - 1;
     }
     
     public void setState(String State)
@@ -77,10 +80,15 @@ public class ScoreBoard extends Actor implements Game
         }
     }
   
+    public void reset_score()
+    {
+        numIronManlives = 3;
+        alienShipsHit = 0;
+    }
     
     public void act() 
     {
-        displayScore();
+       
     }    
     
     

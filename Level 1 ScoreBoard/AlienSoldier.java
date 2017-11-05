@@ -19,6 +19,7 @@ public class AlienSoldier extends Objects
     
     public void act() 
     {
+        display();
         move(-8);
         destroySoldier();
     }    
@@ -45,4 +46,16 @@ public class AlienSoldier extends Objects
             get_scoredet().set_alienSoldierHitCount();
         }
     }
+    
+    public void display()
+    {
+        ScoreBoard scoreB = get_scoredet();
+        GreenfootImage alienSoldiers = scoreB.getImage();
+        GreenfootImage aSoldiers_score = new GreenfootImage(alienSoldiers);
+        GreenfootImage text = new GreenfootImage("aSoldiers: " +  scoreB.get_alienSoldierHitCount(), 24, Color.BLACK, Color.GREEN);
+        aSoldiers_score.drawImage(text, (aSoldiers_score.getWidth() - text.getWidth())/2,
+                             (aSoldiers_score.getHeight() - text.getHeight())/2);
+       scoreB.setImage(aSoldiers_score);
+    }
+    
 }
