@@ -15,6 +15,12 @@ https://www.dropbox.com/s/axdb0n1svf1k1tg/CMPE%20202%20-%20Monstars%20CFD_Week%2
 BurnDown Chart:
 https://www.dropbox.com/s/dh3matde1nk06i1/CMPE%20202%20-%20Monstars%20Sprint%20Task%20Sheet.xlsx?dl=0
 
+## Week 6 (11/04/2017): Minutes of the meeting
+
+1. What did the team do in the past week? : The team has mostly coded their respective modules in the game.
+2. What is the team going to do next week?: We will integrate all the coding modules together in the next week. Also, each team member will complete their assigned individual project deliverables.
+3. What are the current blockers/challenges the team is facing? : Team did not face any challenges during this week.
+
 ## Week 5 (10/28/2017): Minutes of the meeting
 
 1. What did the team do in the past week? : The team has started coding their respective modules and added certain classes and methods in the game.
