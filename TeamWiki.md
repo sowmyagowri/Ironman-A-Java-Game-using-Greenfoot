@@ -10,10 +10,10 @@ Team Wiki:
 5) Sowmya Viswanathan
 
 CFD:
-https://www.dropbox.com/s/axdb0n1svf1k1tg/CMPE%20202%20-%20Monstars%20CFD_Week%205.xlsx?dl=0
+https://www.dropbox.com/s/1n0hgkadhrp2cc5/CMPE%20202%20-%20Monstars%20CFD_Week%205.xlsx?dl=0
 
 BurnDown Chart:
-https://www.dropbox.com/s/dh3matde1nk06i1/CMPE%20202%20-%20Monstars%20Sprint%20Task%20Sheet.xlsx?dl=0
+https://www.dropbox.com/s/wiv7nwybv34tusm/CMPE%20202%20-%20Monstars%20Sprint%20Task%20Sheet.xlsx?dl=0
 
 ## Week 6 (11/04/2017): Minutes of the meeting
 
