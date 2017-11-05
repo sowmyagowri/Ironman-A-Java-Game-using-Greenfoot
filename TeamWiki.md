@@ -13,7 +13,7 @@ CFD:
 https://www.dropbox.com/s/1n0hgkadhrp2cc5/CMPE%20202%20-%20Monstars%20CFD_Week%205.xlsx?dl=0
 
 BurnDown Chart:
-https://www.dropbox.com/s/wiv7nwybv34tusm/CMPE%20202%20-%20Monstars%20Sprint%20Task%20Sheet.xlsx?dl=0
+https://docs.google.com/a/sjsu.edu/spreadsheets/d/1wBbfgccKjMwFemeB587NDkeyNGxnCoAeu6hg_-RYP2k/edit?usp=sharing
 
 ## Week 6 (11/04/2017): Minutes of the meeting
 
