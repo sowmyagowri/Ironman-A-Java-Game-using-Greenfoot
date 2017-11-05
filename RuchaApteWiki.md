@@ -1,6 +1,11 @@
+Week 5 (11/04/2017)
+1. I have worked on coding the command pattern for the menu screen that invokes the play command and the help command. Some part of the coding is left which I plan to do in the next week.
+2. Team members check their modules for bugs each time before commiting the code. This maintains the Build Integrity In principle.
+
+ 
 Week 5 (10/28/2017)
 1. I have started coding the main game menu. I have added the background music and the image and added buttons for start and help in the game.
-2. Team ccomplied to Build Integrity in as they are writing code that is helping the game evolve successfully.
+2. Team complied to Build Integrity in as they are writing code that is helping the game evolve successfully.
 
 
 Week 4 (10/21/2017)
@@ -10,8 +15,8 @@ Week 4 (10/21/2017)
 
 Week 3 (10/7/2017)
 
-I finalized the classes and its functions that would be used for Menu,Level 1 and Level 2.
-The command pattern fits well for the Menu GUI where there would be 2 buttons-Play and Help.
+1. I finalized the classes and its functions that would be used for Menu,Level 1 and Level 2.
+2. The command pattern fits well for the Menu GUI where there would be 2 buttons-Play and Help.
 
 Team complied to Build integrity in by choosing small items to be researched on and finishing it without flaws.
 
