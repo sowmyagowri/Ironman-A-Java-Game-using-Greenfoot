@@ -1,3 +1,11 @@
+### Week 6 (ending 11/04/2017):
+
+All classes related to the actor in both level 1 and 2 have been completed and is now ready for integration. I have also completed the use case diagram as part of the use case specification for one of the test cases.
+
+#### XP core value Simplicity
+
+In the start of Week 6, we had a meeting to discuss if we were on the right track in constructing the design patterns. We also made sure that we were all on the same page and that the design is still maintained simple and easy for integration.
+
 ### Week 5 (ending 10/28/2017):
 
 This week, I started coding for the actor in both Levels 1 & 2. Various functionalities that were implemented were act, move and attack. The setter and the getter functions were also implemented. State Pattern has been implemented by creating two states for the actor class "Ironman".
