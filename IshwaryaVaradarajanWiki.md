@@ -29,6 +29,11 @@ Week5 (10/28/2017)
   b)Construction of tracking player's lives when player is hit by the enemy/enemy objects is in progress.
 * Sequence Diagram for the whole game flow is in progress.
 
+Week6 (11/04/2017)
+* Built number of lives left functionality for player.
+* Built score tracking functionality for Alienships, AlienSoldiers and AlienCreatures.
+* Creating seperate scoreboard objects for each of the above said elements.
+
 Below are the instances that indicate, that the team adopted the 'Eliminate Waste' which is one of the lean core values:
 
 Week1 (09/16/2017)
@@ -46,3 +51,6 @@ Week4 (10/21/2017)
 
 Week5 (10/28/2017)
 1) Consrtuction of individual components are in progress as planned. Developer wait time is eliminated by segregating backlog items well before the start of the construction phase.
+
+Week6 (11/04/2017)
+1) Going according to estimates as per burn down chart. There is not many tasks in progress hence eliminated over-producing.
