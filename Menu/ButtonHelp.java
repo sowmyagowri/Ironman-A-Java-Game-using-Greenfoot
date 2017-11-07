@@ -6,12 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ButtonHelp extends Button
-{
-    /**
-     * Act - do whatever the ButtonHelp wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+public class ButtonHelp extends Button implements ButtonInvoker
+{    
+    private Help help;
+    private ButtonCommand newButtonCommand;
+    public ButtonHelp()
+    {
+        help = new Help();
+    }
+    public Help getHelp()
+    {
+        return help;
+    }
+    
     public void act() 
     {
         // Add your action code here.
@@ -19,9 +26,14 @@ public class ButtonHelp extends Button
 //        {
 //            Greenfoot.setWorld(new Help());
 //        }
+        super.act();
     }    
         public void click()
     {
-        
+        newButtonCommand.executeCommand();
+    }
+    public void setCommand(ButtonCommand newCmd)
+    {
+        this.newButtonCommand = newCmd;
     }
 }
