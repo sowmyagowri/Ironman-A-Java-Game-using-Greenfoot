@@ -6,9 +6,6 @@
  */
 public class DestructionElementFactory  
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class DestructionElementFactory
      */
@@ -16,19 +13,26 @@ public class DestructionElementFactory
     {
         DestructionElement newElement = null;
         
-        if(newDestructionElement ==0)
+        if(newDestructionElement == 0)
         {
             FireballFactory newFireballFactory = new FireballFactory();
-            newElement = newFireballFactory.makeDectructionElement();
+            newElement = newFireballFactory.makeDestructionElement();
             
         }
-    }
+        else if(newDestructionElement == 1)
+        {
+            SpaceShipFactory newSpaceShipFactory = new SpaceShipFactory();
+            newElement = newSpaceShipFactory.makeDestructionElement();
+        }
+        else if(newDestructionElement == 2)
+        {
+            RocketFactory newRocketFactory = new RocketFactory();
+            newElement = newRocketFactory.makeDestructionElement();
+        }
+        
+        return newElement;
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-   
+    }
+ 
 }
+
