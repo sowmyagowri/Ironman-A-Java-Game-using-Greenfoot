@@ -1,17 +1,17 @@
-import greenfoot.*;
+//import greenfoot.*;
 
 public class HelpCommand implements ButtonCommand
 {
-    Reciever helpReciever;
+    Receiver helpReceiver;
     
-    public void setReciever(Reciever newReciever)
+    public void setReceiver(Receiver newReceiver)
     {
-        this.helpReciever = newReciever;
+        this.helpReceiver = newReceiver;
         
     }
     public void executeCommand()
     {
-        helpReciever.performAction();
+        helpReceiver.performAction();
         
     }
 }
