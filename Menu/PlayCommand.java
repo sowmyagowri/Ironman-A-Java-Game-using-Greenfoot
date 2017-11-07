@@ -1,17 +1,16 @@
-import greenfoot.*;
 
 public class PlayCommand implements ButtonCommand
 {
-    Reciever playReciever;
+    Receiver playReceiver;
     
-    public void setReciever(Reciever newReciever)
+    public void setReceiver(Receiver newRec)
     {
-        this.playReciever = newReciever;
+        this.playReceiver = newRec;
         
     }
     public void executeCommand()
     {
-        playReciever.performAction();
+        playReceiver.performAction();
         
     }
 }
