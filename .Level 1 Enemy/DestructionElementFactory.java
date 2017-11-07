@@ -1,19 +1,34 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class DestructionElementFactory here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class DestructionElementFactory extends Actor
+public class DestructionElementFactory  
 {
+    // instance variables - replace the example below with your own
+    private int x;
+
     /**
-     * Act - do whatever the DestructionElementFactory wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor for objects of class DestructionElementFactory
      */
-    public void act() 
+    public DestructionElement DestructionElementFactory(int newDestructionElement)
     {
-        // Add your action code here.
-    }    
+        DestructionElement newElement = null;
+        
+        if(newDestructionElement ==0)
+        {
+            FireballFactory newFireballFactory = new FireballFactory();
+            newElement = newFireballFactory.makeDectructionElement();
+            
+        }
+    }
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+   
 }
