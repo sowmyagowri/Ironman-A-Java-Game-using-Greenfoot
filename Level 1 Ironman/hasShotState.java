@@ -10,9 +10,9 @@ public class hasShotState implements IronmanState
 {
     Ironman heroObject;
     World world;
-    simpleTimer shotTimer;
+    timer shotTimer;
 
-    public hasShotState(Ironman heroObject,simpleTimer shotTimer)
+    public hasShotState(Ironman heroObject,timer shotTimer)
     {
         this.heroObject = heroObject;
         this.shotTimer = shotTimer;
@@ -21,7 +21,7 @@ public class hasShotState implements IronmanState
     public void attackEnemy()
     {
         World world = heroObject.getWorld();
-        world.addObject(new ShotPlayer(), heroObject.getX()+heroObject.getImage().getWidth()/2, heroObject.getY());
+        world.addObject(new shot(), heroObject.getX()+heroObject.getImage().getWidth()/2, heroObject.getY());
         int shot = heroObject.getNumShots()-1;
         heroObject.setNumShots(shot);
         if(heroObject.getNumShots() == 0){

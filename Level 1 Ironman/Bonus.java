@@ -12,7 +12,6 @@ public class Bonus extends Actor
     protected GreenfootSound bonusLifeSound;
     protected GreenfootSound bonusShotsSound;
     
-    
     public Bonus()
     {
         direction = Greenfoot.getRandomNumber(3) + 1;
@@ -39,10 +38,7 @@ public class Bonus extends Actor
     {
        Ironman ironman = (Ironman)getOneIntersectingObject(Ironman.class);
        if(ironman!=null)
-        {
-            ironman.setPoints(10);
-            bonus(ironman);
-        }
+        bonus(ironman);
     }
     
     public void bonus(Ironman ironman)

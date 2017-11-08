@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Sowmya Gowrishankar) 
  * @version (a version number or a date)
  */
-public class Ironman extends Character
+public class Ironman extends Actor
 {
     private GreenfootImage[] images;
 
@@ -14,8 +14,6 @@ public class Ironman extends Character
     private GreenfootSound shotPlayerSound;
     
     private int lives; // Total Lives of Player
-    private int health; // Player health.
-    private int points; //Total points obtained by the player
     private int numShots; //Number of shots the player has
     
     private IronmanState hasShotState;
@@ -23,7 +21,8 @@ public class Ironman extends Character
     private IronmanState currentState = noShotState;
     
     private Observer observer;
-
+    
+    private timer shotTimer;
     /**
      * Ironman builder class. Ironman images are loaded, variable life, health, and points are initialized. Attacks sounds are loaded.
      */
@@ -38,16 +37,15 @@ public class Ironman extends Character
        shotPlayerSound = new GreenfootSound("shotPlayer.wav");
        
        lives = 3;
-       health = 50;
        numShots = 30;
-       points=0;
-        
+       
+       shotTimer = new timer();
+       shotTimer.shot();
+       
        hasShotState = new hasShotState(this,shotTimer);
        noShotState = new noShotState(this);
-       
-       if(numShots > 0){
-           this.currentState = hasShotState;
-       }
+       if(numShots > 0)
+        this.currentState = hasShotState;
     }
     
     /**
@@ -93,11 +91,10 @@ public class Ironman extends Character
     /**
      * When the player presses the spacebar, "Ironman" will launch a shot. 
      * Each shot has a delay of 250 milliseconds.
-     * When you press the letter z launches three rays.
      */
     public void attack()
     {
-        if(shotTimer.millisElapsed() > 250){
+        if(shotTimer.millisecondsElapsed() > 250){
             if(Greenfoot.isKeyDown("space")){
                 shotPlayerSound.play();
                 currentState.attackEnemy();
@@ -106,30 +103,62 @@ public class Ironman extends Character
     }
     
     /**
-     * Subtraction method 'h' Player health.
-     * And if health reaches 0 subtract one life and restore 50 health.
-     */
-    public void reduceHealth(int h)
+     * Check if Ironman is touching an enemy and destroys it.
+    */
+    public void isTouchingEnemy()
     {
-        
-        if(health > 0){
-            health-=h;
-            if(health <= 0){
-                 lives--;
-                 health = 50;
-                 if(lives==0)
-                    health=0;
-            }
-        }
-        else if(health <= 0)
-        {
-            lives--;
-            health = 50;
-            if(lives==0)
-                health=0;
-        }
+       Object1 obj1 = (Object1)getOneIntersectingObject(Object1.class);
+       Object2 obj2 = (Object2)getOneIntersectingObject(Object2.class);
+       Object3 obj3 = (Object3)getOneIntersectingObject(Object3.class);
+       Enemy e = (Enemy)getOneIntersectingObject(Enemy.class);
+       
+       if(obj1!=null)
+       {
+           Scenario es = (Scenario)getWorld();
+           explosionSound.play();
+           getWorld().addObject(new Boom(), obj1.getX(), obj1.getY());
+           getWorld().removeObject(obj1);
+           this.reduceLife();
+       }
+       else if(obj2!=null)
+       {
+           Scenario es = (Scenario)getWorld();
+           explosionSound.play();
+           getWorld().addObject(new Boom(), obj2.getX(), obj2.getY());
+           getWorld().removeObject(obj2);
+           this.reduceLife();
+       }
+       else if(obj3!=null)
+       {
+           Scenario es = (Scenario)getWorld();
+           explosionSound.play();
+           getWorld().addObject(new Boom(), obj3.getX(), obj3.getY());
+           getWorld().removeObject(obj3);
+           this.reduceLife();
+       }
     }
     
+    /**
+     * Randomly generated bonus throughout the game.
+     */
+    public void generateBonus()
+    {
+        if(numShots < 15)
+        {
+            if(Greenfoot.getRandomNumber(5000) < 20)
+            {
+                getWorld().addObject(new bonusShots(),
+                Greenfoot.getRandomNumber(1000), Greenfoot.getRandomNumber(500));
+            }
+        }
+        
+        if(Greenfoot.getRandomNumber(18000) < 5 && lives<5)
+        {
+            getWorld().addObject(new bonusLife(), 
+            Greenfoot.getRandomNumber(1000), Greenfoot.getRandomNumber(500));
+        }
+        
+    }
     /**
      * Getter function - Returns the number of lives the player has.
     */
@@ -139,27 +168,11 @@ public class Ironman extends Character
     }
     
     /**
-     * Getter function - Returns the health the player has
-    */
-    public int getHealth()
-    {
-        return health;
-    }
-    
-    /**
      * Getter function - Returns the number of shots the player has
     */
     public int getNumShots()
     {
         return numShots;
-    }
-   
-    /**
-     * Getter function - Returns the points the player has
-    */
-    public int getPoints()
-    {
-        return points;
     }
     
     /**
@@ -178,26 +191,9 @@ public class Ironman extends Character
         numShots = 100;
     }
     
-    /**
-     * Setter function - Assigns the health of the player
-    */
-    public void setHealth(int s)
-    {
-        health = s;
-    }
-    
-    /**
-     * Assign a value to the points..
-     */
-    public void setPoints(int p)
-    {
-        points += p;
-        notifyObservers();
-    }
-    
     public void notifyObservers()
     {
-       observer.updatePoints(points); 
+       observer.updatePoints(numShots); 
     }
     
     /**
@@ -209,25 +205,11 @@ public class Ironman extends Character
     }
     
     /**
-     * Randomly generated bonus throughout the game.
+     * Increase Life
      */
-    public void generateBonus()
+    public void reduceLife()
     {
-        if(numShots < 15)
-        {
-            if(Greenfoot.getRandomNumber(5000) < 20)
-            {
-                getWorld().addObject( new bonusShots(),
-                Greenfoot.getRandomNumber(1000), Greenfoot.getRandomNumber(500));
-            }
-        }
-        
-        if(Greenfoot.getRandomNumber(18000) < 5 && lives<5)
-        {
-            getWorld().addObject( new bonusLife(), 
-            Greenfoot.getRandomNumber(1000), Greenfoot.getRandomNumber(500));
-        }
-        
+        lives--;
     }
     
     public void setCurrentState(IronmanState state) {

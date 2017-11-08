@@ -1,10 +1,20 @@
 #BlueJ class context
 comment0.target=Bonus
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Bonus\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\r\n\ @author\ (Sowmya\ Gowrishankar)\r\n\ @version\ \r\n
 comment1.params=
 comment1.target=Bonus()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Bonus\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Bonus\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ touchPlayer()
+comment3.text=\r\n\ Check\ if\ the\ player\ touched\ the\ bonus\r\n
+comment4.params=ironman
+comment4.target=void\ bonus(Ironman)
+comment5.params=
+comment5.target=void\ move()
+comment5.text=\r\n\ Depending\ on\ the\ directionection\ the\ actor\ moves.\r\n
+comment6.params=
+comment6.target=void\ touchBorder()
+comment6.text=\r\n\ Touching\ the\ edge\ of\ the\ world,\ the\ bonus\ object\ should\ bounce\r\n
+numComments=7
