@@ -6,18 +6,18 @@
  */
 public class FireballFactory extends DestructionElementFactory 
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+   
+    
     /**
      * Constructor for objects of class FireballFactory
      */
-    public DestructionElement makeDestructionElement()
+    public FireballFactory(ScoreDisplay display)
     {
-        return new FireballElement();
+        makeDestructionElement(display);
     }
-
-   
-    
+    public DestructionElements makeDestructionElement(ScoreDisplay disp)
+    {
+        return new FireballElement(disp);
+    }
 }
 
