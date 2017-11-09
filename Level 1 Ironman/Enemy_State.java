@@ -7,7 +7,7 @@ import java.util.*;
  * @author (Sowmya Viswanathan) 
  * @version (a version number or a date)
  */
-public class Enemy_State extends Actor
+public class Enemy_State extends Objects
 {
    
     private int targetx=0, targety=0,counter=0,vx=1,lives=50;

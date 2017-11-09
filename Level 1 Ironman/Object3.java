@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Sowmya Viswanathan) 
  * @version (a version number or a date)
  */
-public class Object3 extends Actor implements Handler 
+public class Object3 extends Objects implements Handler 
 {
     private boolean toRemove=false;
     private int vx=3;

@@ -16,7 +16,12 @@ public class Scenario extends World
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
     
-    private Ironman ironman;
+    //private Ironman ironman;
+    private ScoreBoard scorekeeper = new ScoreBoard();
+    private ScoreDisplay display2;
+    private ScoreDisplay display3;
+    private ScoreDisplay display4;
+    private int counter = 0;
     public Scenario()
     {    
         super(2000, 1200, 1);
@@ -35,6 +40,14 @@ public class Scenario extends World
         while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
         paint(scrollPosition);
+        
+        counter++;
+
+        if(counter >= 20)
+        {
+            createRndmObjs();
+            counter = 0;
+        }
     }
      
      private void paint(int position)
@@ -50,9 +63,39 @@ public class Scenario extends World
      */
     private void prepare()
     {
-        ironman = new Ironman();
-        addObject(ironman,200, 500);
-        Enemy enemy = new Enemy();
-        addObject(enemy,1800,191);
+        //ironman = new Ironman();
+        //addObject(ironman,200, 500);
+        //Enemy enemy = new Enemy();
+        //addObject(enemy,1800,191);
+        
+        ScoreDisplay display1 = new ScoreDisplay(scorekeeper.get_numIronManlives(), new GreenfootImage("Iron-Man.png"));
+        addObject(display1, 150,31);
+        Ironman ironman = new Ironman(display1);
+        addObject(ironman,122,135);
+        
+        display2 = new ScoreDisplay(scorekeeper.get_alienShipsHitCount(),new GreenfootImage("Alien-Ship.png"));
+        addObject(display2, 325,31);
+        
+        display3  = new ScoreDisplay(scorekeeper.get_alienSoldierHitCount(),new GreenfootImage("Alien-Sold.png"));
+        addObject(display3, 500,31);
+        
+        display4  = new ScoreDisplay(scorekeeper.get_alienSoldierHitCount(),new GreenfootImage("Alien1.png"));
+        addObject(display4, 700,31);
+    }
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    public void createRndmObjs()
+    {
+       DestructionElementFactory theDestructionFactory = new DestructionElementFactory();
+       Objects  theEnemy = null;       
+       int enemyType = Greenfoot.getRandomNumber(3);        
+       if(enemyType >= 0)
+       {
+           theEnemy = theDestructionFactory.selectDestructionElementFactory(enemyType, display2, display3, display4);
+           addObject(theEnemy, 600, Greenfoot.getRandomNumber(400));           
+       }    
     }
 }

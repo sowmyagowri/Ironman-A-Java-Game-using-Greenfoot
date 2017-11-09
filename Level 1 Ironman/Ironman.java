@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Sowmya Gowrishankar) 
  * @version (a version number or a date)
  */
-public class Ironman extends Actor
+public class Ironman extends Objects implements Game
 {
     private GreenfootImage[] images;
 
@@ -20,13 +20,13 @@ public class Ironman extends Actor
     private IronmanState noShotState;
     private IronmanState currentState = noShotState;
     
-    private Observer observer;
+    private ScoreDisplay scoredisplay;
     
     private timer shotTimer;
     /**
      * Ironman builder class. Ironman images are loaded, variable life, health, and points are initialized. Attacks sounds are loaded.
      */
-    public Ironman()
+    public Ironman(ScoreDisplay display)
     {
        images = new GreenfootImage [3];
        images[0] = new GreenfootImage("Ironman.png");
@@ -36,7 +36,9 @@ public class Ironman extends Actor
        explosionSound = new GreenfootSound("explosionNave.wav");
        shotPlayerSound = new GreenfootSound("shotPlayer.wav");
        
-       lives = 3;
+       this.scoredisplay = display;
+       
+       lives = get_scoreboard().get_numIronManlives();
        numShots = 30;
        
        shotTimer = new timer();
@@ -45,7 +47,7 @@ public class Ironman extends Actor
        hasShotState = new hasShotState(this,shotTimer);
        noShotState = new noShotState(this);
        if(numShots > 0)
-        this.currentState = hasShotState;
+            this.currentState = hasShotState;
     }
     
     /**
@@ -107,36 +109,93 @@ public class Ironman extends Actor
     */
     public void isTouchingEnemy()
     {
+       //level 1 enemies
+       AlienShip as = (AlienShip)getOneIntersectingObject(AlienShip.class);
+       Alien alien = (Alien)getOneIntersectingObject(Alien.class);
+       AlienSoldier aliensoldier = (AlienSoldier)getOneIntersectingObject(AlienSoldier.class);
+       //Level 2 enemies
        Object1 obj1 = (Object1)getOneIntersectingObject(Object1.class);
        Object2 obj2 = (Object2)getOneIntersectingObject(Object2.class);
        Object3 obj3 = (Object3)getOneIntersectingObject(Object3.class);
        Enemy e = (Enemy)getOneIntersectingObject(Enemy.class);
-       
-       if(obj1!=null)
+       if((get_scoreboard().get_numIronManlives() > 0))
        {
-           Scenario es = (Scenario)getWorld();
-           explosionSound.play();
-           getWorld().addObject(new Boom(), obj1.getX(), obj1.getY());
-           getWorld().removeObject(obj1);
-           this.reduceLife();
-       }
-       else if(obj2!=null)
-       {
-           Scenario es = (Scenario)getWorld();
-           explosionSound.play();
-           getWorld().addObject(new Boom(), obj2.getX(), obj2.getY());
-           getWorld().removeObject(obj2);
-           this.reduceLife();
-       }
-       else if(obj3!=null)
-       {
-           Scenario es = (Scenario)getWorld();
-           explosionSound.play();
-           getWorld().addObject(new Boom(), obj3.getX(), obj3.getY());
-           getWorld().removeObject(obj3);
-           this.reduceLife();
-       }
+           if(as!=null)
+           {
+               Scenario es = (Scenario)getWorld();
+               explosionSound.play();
+               getWorld().addObject(new Boom(), as.getX(), as.getY());
+               getWorld().removeObject(as);
+               notifyObservers();
+               scoredisplay.updateDisplay(this);
+               this.reduceLife();
+           }
+           
+           if(alien!=null)
+           {
+               Scenario es = (Scenario)getWorld();
+               explosionSound.play();
+               getWorld().addObject(new Boom(), alien.getX(), alien.getY());
+               getWorld().removeObject(alien);
+               notifyObservers();
+               scoredisplay.updateDisplay(this);
+               this.reduceLife();
+           }
+           
+           if(aliensoldier!=null)
+           {
+               Scenario es = (Scenario)getWorld();
+               explosionSound.play();
+               getWorld().addObject(new Boom(), aliensoldier.getX(), aliensoldier.getY());
+               getWorld().removeObject(aliensoldier);
+               notifyObservers();
+               scoredisplay.updateDisplay(this);
+               this.reduceLife();
+           }
+           
+           if(obj1!=null)
+           {
+               Scenario es = (Scenario)getWorld();
+               explosionSound.play();
+               getWorld().addObject(new Boom(), obj1.getX(), obj1.getY());
+               getWorld().removeObject(obj1);
+               notifyObservers();
+               scoredisplay.updateDisplay(this);
+               this.reduceLife();
+           }
+           
+           if(obj2!=null)
+           {
+               Scenario es = (Scenario)getWorld();
+               explosionSound.play();
+               getWorld().addObject(new Boom(), obj2.getX(), obj2.getY());
+               getWorld().removeObject(obj2);
+               notifyObservers();
+               scoredisplay.updateDisplay(this);
+               this.reduceLife();
+           }
+           
+           if(obj3!=null)
+           {
+               Scenario es = (Scenario)getWorld();
+               explosionSound.play();
+               getWorld().addObject(new Boom(), obj3.getX(), obj3.getY());
+               getWorld().removeObject(obj3);
+               notifyObservers();
+               scoredisplay.updateDisplay(this);
+               this.reduceLife();
+           }
+        }
+        else
+        {
+            GameOver gameover = new GameOver();
+            getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
+            get_scoreboard().reset_score();
+            getWorld().removeObject(this);
+            //getWorld().stopped();
+        }
     }
+
     
     /**
      * Randomly generated bonus throughout the game.
@@ -193,7 +252,7 @@ public class Ironman extends Actor
     
     public void notifyObservers()
     {
-       observer.updatePoints(numShots); 
+       get_scoreboard().updateScore(this); 
     }
     
     /**
@@ -201,7 +260,7 @@ public class Ironman extends Actor
      */
     public void increaseLife()
     {
-        lives++;
+        lives = get_scoreboard().get_numIronManlives();
     }
     
     /**
@@ -209,7 +268,7 @@ public class Ironman extends Actor
      */
     public void reduceLife()
     {
-        lives--;
+        lives = get_scoreboard().get_numIronManlives();
     }
     
     public void setCurrentState(IronmanState state) {

@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class shot here.
  * 
- * @author (your name) 
+ * @author (Sowmya Gowrishankar) 
  * @version (a version number or a date)
  */
 public class shot extends Actor
@@ -33,7 +33,6 @@ public class shot extends Actor
     public void act() 
     {        
        Scenario es = (Scenario)getWorld();
-       Object3 obj3 = (Object3)getOneIntersectingObject(Object3.class);
        Enemy e = (Enemy)getOneIntersectingObject(Enemy.class);
        
        if(isTouching(Object1.class))
@@ -56,12 +55,40 @@ public class shot extends Actor
         
        else if(isTouching(Object3.class))
        {
-            Object2 obj2 = (Object2)getOneIntersectingObject(Object2.class);
+            Object3 obj3 = (Object3)getOneIntersectingObject(Object3.class);
             explosionSound.play();
             getWorld().addObject(new Boom(), getX(), getY());
             getWorld().removeObject(obj3);
             getWorld().removeObject(this);
        }
+       
+       else if(isTouching(AlienShip.class))
+       {
+            AlienShip as = (AlienShip)getOneIntersectingObject(AlienShip.class);
+            explosionSound.play();
+            getWorld().addObject(new Boom(), getX(), getY());
+            getWorld().removeObject(as);
+            getWorld().removeObject(this);
+       }
+       
+       else if(isTouching(Alien.class))
+       {
+            Alien alien = (Alien)getOneIntersectingObject(Alien.class);
+            explosionSound.play();
+            getWorld().addObject(new Boom(), getX(), getY());
+            getWorld().removeObject(alien);
+            getWorld().removeObject(this);
+       }
+
+       else if(isTouching(AlienSoldier.class))
+       {
+            AlienSoldier aliensoldier = (AlienSoldier)getOneIntersectingObject(AlienSoldier.class);
+            explosionSound.play();
+            getWorld().addObject(new Boom(), getX(), getY());
+            getWorld().removeObject(aliensoldier);
+            getWorld().removeObject(this);
+       }
+       
        else if(getX() > getWorld().getWidth() - 2)
             getWorld().removeObject(this);
        else

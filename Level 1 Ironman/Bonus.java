@@ -3,9 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  *
  * @author (Sowmya Gowrishankar)
- * @version 
+ * @version (a version number or a date)
  */
-public class Bonus extends Actor
+public class Bonus extends Objects
 {
     private int direction;
     private int tempdirection;
