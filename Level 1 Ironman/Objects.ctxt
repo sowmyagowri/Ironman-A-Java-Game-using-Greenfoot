@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Objects
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Objects\ here.\r\n\ \r\n\ @author\ (Sowmya\ Gowrishankar)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=ScoreBoard\ get_scoreboard()
+numComments=3

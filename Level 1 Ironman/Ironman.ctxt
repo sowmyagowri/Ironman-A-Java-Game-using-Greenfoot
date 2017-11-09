@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Ironman
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ironman\ here.\r\n\ \r\n\ @author\ (Sowmya\ Gowrishankar)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Ironman()
+comment1.params=display
+comment1.target=Ironman(ScoreDisplay)
 comment1.text=\r\n\ Ironman\ builder\ class.\ Ironman\ images\ are\ loaded,\ variable\ life,\ health,\ and\ points\ are\ initialized.\ Attacks\ sounds\ are\ loaded.\r\n
 comment10.params=
 comment10.target=void\ setShots()
