@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=hasShotState
+comment0.text=\n\ Write\ a\ description\ of\ class\ hasShotState\ here.\n\ \n\ @author\ (Sowmya\ Gowrishankar)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=heroObject\ shotTimer
+comment1.target=hasShotState(Ironman,\ timer)
+comment2.params=display
+comment2.target=void\ attackEnemy(ScoreDisplay)
+numComments=3
