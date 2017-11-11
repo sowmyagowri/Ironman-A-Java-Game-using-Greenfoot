@@ -1,3 +1,11 @@
+### Week 7 (ending 11/11/2017):
+
+I completed all the code related to the player module and its interaction with the other objects in the game. All of us met a couple of times during the week to integrate all the modules together. Only a small portion (around 25%) is left to be integrated.
+
+#### XP core value Simplicity
+
+As all of us have completed the coding of our respective modules, we started the integration this week. We made sure, the code still remained simple and that there's no redundancy in the code between the various classes as each of the module was done by a different member. After completion of integration, we plan to refactor the full game code to make sure the design stays simple and the game flow easy to understand.
+
 ### Week 6 (ending 11/04/2017):
 
 All classes related to the actor in both level 1 and 2 have been completed and is now ready for integration. I have also completed the use case diagram as part of the use case specification for one of the test cases.
