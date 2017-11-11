@@ -34,6 +34,11 @@ Week6 (11/04/2017)
 * Built score tracking functionality for Alienships, AlienSoldiers and AlienCreatures.
 * Creating seperate scoreboard objects for each of the above said elements.
 
+Week7 (11/10/2017)
+* Completed Level 1 ScoreBoard module integration with other enemy and player modules of the game
+* Integration of Level 2 scoreboard module with player completed. 
+* Integration of Level 2 scoreboard module enemy module is in progress
+
 Below are the instances that indicate, that the team adopted the 'Eliminate Waste' which is one of the lean core values:
 
 Week1 (09/16/2017)
@@ -46,7 +51,7 @@ Week2 (9/30/2017)
 Week3 (10/07/2017)
 1) Items are added in the backlog for each module of the game from design to development and is being appropriately assigned to each member to facilitate continuous flow of work in the team hence avoiding unnecessary waiting.
 
-Week4 (10/21/2017)
+Week4 (11/21/2017)
 1) Through team meeting and effective communication, work items are seamlessly segregated between team members, hence avoiding redundancy (more than one person working on the same module). 
 
 Week5 (10/28/2017)
@@ -54,3 +59,6 @@ Week5 (10/28/2017)
 
 Week6 (11/04/2017)
 1) Going according to estimates as per burn down chart. There is not many tasks in progress hence eliminated over-producing.
+
+Week7 (11/21/2017)
+1) Integrated the various game modules for level 1 by having team meetings and discussions to avoid confusion and prevented scattered work place or unnecessary movement of people.
