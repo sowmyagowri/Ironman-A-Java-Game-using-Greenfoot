@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=SpaceShipFactory
-comment0.text=\n\ Write\ a\ description\ of\ class\ SpaceShipFactory\ here.\n\ \n\ @author\ (Avni\ Gulati)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=display
-comment1.target=SpaceShipFactory(ScoreDisplay)
-comment2.params=display2
-comment2.target=Objects\ makeDestructionElement(ScoreDisplay)
-numComments=3

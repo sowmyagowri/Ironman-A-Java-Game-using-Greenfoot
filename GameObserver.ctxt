@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.target=GameObserver
-comment0.text=\n\ Write\ a\ description\ of\ class\ GameObserver\ here.\n\ \n\ @author\ (Ishwarya\ Varadarajan)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=subject
-comment1.target=void\ updateScore(Objects)
-numComments=2
