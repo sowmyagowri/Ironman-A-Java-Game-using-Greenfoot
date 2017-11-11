@@ -1,6 +1,6 @@
 # Week 7
 
-In seventh week, the team intehrated all the modules together to make the game work implementing their respective design patterns.
+In seventh week, the team integrated all the modules together to make the game work implementing their respective design patterns.
 
 ## XP core value Feedback
 
