@@ -1,3 +1,13 @@
+Week#7
+
+Integration of different modules was begun. We all sat down to integrate our code. Around 70% of the work is completed. Integration with the levels is remaining.
+
+XP Core Value: Communication
+
+Week#7
+
+We had a meeting and we arrived at a conclusion that integration of the different modules had to be started. We met couple of times during the week to integrate different modules. We even communicated through phone calls to get out code working. Around 25-30% of the work is still pending.
+
 Week#6
 
 Design Pattern was changed to CHain of Responsibility pattern for the Level 2 Enemy module as it fit the requirements better. The design pattern has been implemented and the code has been uploaded in the github. Started working on the BDD scenarios.
