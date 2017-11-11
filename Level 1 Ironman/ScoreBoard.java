@@ -14,6 +14,7 @@ public class ScoreBoard extends Actor implements GameObserver
     private static int alienShipsHit = 0;
     private static int alienSoldiersHit = 0;
     private static int aliensHit = 0;
+    private static int ironManShots = 50;
     private String state = "Initial";
    
     public String getState()
@@ -41,6 +42,11 @@ public class ScoreBoard extends Actor implements GameObserver
         return aliensHit;
     }
     
+    public int get_ironManShots()
+    {
+        return ironManShots;
+    }
+    
     public void set_alienShipsHitCount()
     {
         alienShipsHit++;
@@ -56,17 +62,33 @@ public class ScoreBoard extends Actor implements GameObserver
        numIronManlives =  numIronManlives - 1;
     }
     
+    public void inc_numIronManlives()
+    {
+       numIronManlives =  numIronManlives + 1;
+    }
+    
     public void set_aliensHitCount()
     {
         aliensHit++;
     }
   
+    public void set_ironManShots()
+    {
+        ironManShots--;
+    }
+    
+    public void inc_ironManShots()
+    {
+        ironManShots+=10;
+    }
+    
     public void reset_score()
     {
         numIronManlives = 3;
         alienShipsHit = 0;
         alienSoldiersHit = 0;
         aliensHit = 0;
+        ironManShots = 50;
     }
     
     public void act() 
@@ -91,6 +113,18 @@ public class ScoreBoard extends Actor implements GameObserver
         else if(subject.getClass().getName() == "Alien")
         {
             set_aliensHitCount();
+        }
+        else if(subject.getClass().getName() == "shot")
+        {
+            set_ironManShots();
+        }
+        else if(subject.getClass().getName() == "bonusShots")
+        {
+            inc_ironManShots();
+        }
+        else if(subject.getClass().getName() == "bonusLife")
+        {
+            inc_numIronManlives();
         }
     }
 }

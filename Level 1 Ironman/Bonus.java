@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Sowmya Gowrishankar)
  * @version (a version number or a date)
  */
-public class Bonus extends Objects
+public class Bonus extends Objects implements Game
 {
     private int direction;
     private int tempdirection;
@@ -96,5 +96,10 @@ public class Bonus extends Objects
             else if(direction == 2)
                 direction = 1;
         }
+    }
+    
+    public void notifyObservers()
+    {
+        
     }
 }

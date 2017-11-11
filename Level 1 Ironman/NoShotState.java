@@ -1,22 +1,22 @@
     /**
- * Write a description of class NoShotState here.
+ * Write a description of class noShotState here.
  * 
  * @author (Sowmya Gowrishankar) 
  * @version (a version number or a date)
  */
-public class NoShotState implements IronmanState
+public class noShotState implements IronmanState
 {
     Ironman heroObject;
     
     /**
-     * Constructor for objects of class NoShotState
+     * Constructor for objects of class noShotState
      */
-    public NoShotState(Ironman heroObject)
+    public noShotState(Ironman heroObject)
     {
         this.heroObject = heroObject;
     }
 
-    public void attackEnemy()
+    public void attackEnemy(ScoreDisplay display)
     {    
     }
 }

@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=bonusShots
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ bonusShots\ here.\r\n\ \r\n\ @author\ (Sowmya\ Gowrishankar)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ BonusShot\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment2.params=ironman
-comment2.target=void\ bonus(Ironman)
-comment2.text=\r\n\ Increments\ Shots\r\n
-numComments=3
+comment0.text=\n\ Write\ a\ description\ of\ class\ bonusShots\ here.\n\ \n\ @author\ (Sowmya\ Gowrishankar)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=disp
+comment1.target=bonusShots(ScoreDisplay)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=ironman
+comment3.target=void\ bonus(Ironman)
+comment3.text=\n\ Increments\ Shots\n
+comment4.params=
+comment4.target=void\ notifyObservers()
+numComments=5

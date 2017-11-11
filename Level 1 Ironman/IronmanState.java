@@ -9,5 +9,5 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public interface IronmanState
 {
-    public void attackEnemy();
+    public void attackEnemy(ScoreDisplay display);
 }

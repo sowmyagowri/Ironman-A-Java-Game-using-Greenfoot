@@ -18,13 +18,29 @@ public class Alien extends Objects implements Game
     public void act() 
     {
         move(-8);
-        if(getX() == 0)
-            getWorld().removeObject(this);
+        removeAlien();
     }    
     
     public void notifyObservers()
     {
         get_scoreboard().updateScore(this);
+        scoredisplay.updateDisplay(this);
+    }
+    
+    public void removeAlien()
+    {
+        if(isTouching(shot.class))
+       {
+            //AlienShip as = (AlienShip)getOneIntersectingObject(AlienShip.class);
+            //explosionSound.play();
+            Explosion bomb = new Explosion();
+            getWorld().addObject(bomb, getX(), getY()); 
+            removeTouching(shot.class);
+            //getWorld().addObject(new Boom(), getX(), getY());
+            notifyObservers();
+            System.out.println("Alienhit");
+            getWorld().removeObject(this);
+       }
     }
     
 }

@@ -11,22 +11,28 @@ public class hasShotState implements IronmanState
     Ironman heroObject;
     World world;
     timer shotTimer;
-
+    ScoreBoard sb = new ScoreBoard();
+    
     public hasShotState(Ironman heroObject,timer shotTimer)
     {
         this.heroObject = heroObject;
         this.shotTimer = shotTimer;
     }
 
-    public void attackEnemy()
+    public void attackEnemy(ScoreDisplay display)
     {
         World world = heroObject.getWorld();
-        world.addObject(new shot(), heroObject.getX()+heroObject.getImage().getWidth()/2, heroObject.getY());
-        int shot = heroObject.getNumShots()-1;
-        heroObject.setNumShots(shot);
-        if(heroObject.getNumShots() == 0){
+        shot shots = new shot(display);
+        world.addObject(shots, heroObject.getX()+heroObject.getImage().getWidth()/2, heroObject.getY());
+        
+        if(sb.get_ironManShots() == 0){
             heroObject.setCurrentState(heroObject.getnoShotState());
         }
+        
+        shots.notifyObservers();
+    
         shotTimer.shot();
     }
+    
+    
 }

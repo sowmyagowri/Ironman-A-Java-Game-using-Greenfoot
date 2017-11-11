@@ -1,12 +1,16 @@
 #BlueJ class context
 comment0.target=ScoreDisplay
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ScoreDisplay\ here.\r\n\ \r\n\ @author\ (Ishwarya\ Varadarajan)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ ScoreDisplay\ here.\n\ \n\ @author\ (Ishwarya\ Varadarajan)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=void\ act()
-comment2.params=points\ image
-comment2.target=ScoreDisplay(int,\ greenfoot.GreenfootImage)
+comment2.params=string
+comment2.target=ScoreDisplay(java.lang.String)
 comment3.params=points\ image
-comment3.target=void\ display(int,\ greenfoot.GreenfootImage)
-comment4.params=obj
-comment4.target=void\ updateDisplay(Objects)
-numComments=5
+comment3.target=ScoreDisplay(int,\ greenfoot.GreenfootImage)
+comment4.params=points\ image\ obj_name
+comment4.target=ScoreDisplay(int,\ greenfoot.GreenfootImage,\ java.lang.String)
+comment5.params=points\ image\ obj_name
+comment5.target=void\ display(int,\ greenfoot.GreenfootImage,\ java.lang.String)
+comment6.params=obj
+comment6.target=void\ updateDisplay(Objects)
+numComments=7

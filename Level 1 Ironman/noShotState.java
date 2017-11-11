@@ -16,7 +16,7 @@ public class noShotState implements IronmanState
         this.heroObject = heroObject;
     }
 
-    public void attackEnemy()
+    public void attackEnemy(ScoreDisplay display)
     {    
     }
 }

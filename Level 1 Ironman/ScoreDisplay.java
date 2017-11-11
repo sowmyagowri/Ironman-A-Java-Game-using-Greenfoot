@@ -14,37 +14,85 @@ public class ScoreDisplay extends Actor
     GreenfootImage scoredisplay;
     GreenfootImage text;
     GreenfootImage imagE;
+    String name;
     public void act() 
     {
     }    
     
+    public ScoreDisplay(String string)
+    {
+        score = 0;
+        name = string;
+        imagE = new GreenfootImage(string, 30, Color.BLACK, transparent);
+        display(score, imagE, name);
+    }
+    
     public ScoreDisplay(int points, GreenfootImage image)
     {
         score = points;
-        display(score, image);
+        name = " ";
+        display(score, image, name);
     }
     
-    public void display(int points, GreenfootImage image)
+    public ScoreDisplay(int points, GreenfootImage image, String obj_name)
+    {
+        score = points;
+        name = obj_name;
+        display(score, image, name);
+    }
+    
+    public void display(int points, GreenfootImage image, String obj_name)
     {
         scoredisplay = getImage();
         mainDisplay = new GreenfootImage(500, 100);
-        mainDisplay.drawRect(160, 20, 900, 60);
-        text = new GreenfootImage("       =  " +  points, 20, Color.BLACK, transparent);
-        scoredisplay.drawImage(image, 20, 20);
-        scoredisplay.drawImage(text, 40, 20);
-        scoredisplay.scale(150, 75);
+        if(obj_name == "ironman")
+        {
+            scoredisplay.drawImage(image, 15, 20);
+            int img_x_pos = 50;
+            GreenfootImage img = new GreenfootImage("heart.png");
+            for(int i=0; i<points; i++)
+            {
+                scoredisplay.drawImage(img, img_x_pos, 20);
+                img_x_pos = img_x_pos + 20;
+            }
+        }
+        else if(obj_name == "Level 1")
+        {
+            
+            scoredisplay.drawImage(image, 25, 20);
+        }
+        /*else if(obj_name == "Total")
+        {
+            ScoreBoard scorekeeper = new ScoreBoard();
+            points = scorekeeper.get_alienShipsHitCount() + 
+                          scorekeeper.get_alienSoldierHitCount() +
+                          scorekeeper.get_aliensHitCount();
+            text = new GreenfootImage("Total:" + points + "/50", 24, Color.BLACK, transparent);
+            image.clear();
+            image.drawImage(text, 0, 0);
+            scoredisplay.drawImage(image, 11, 22);
+        }*/
+        else
+        {
+            text = new GreenfootImage("     =" +  points, 24, Color.BLACK, transparent);
+            scoredisplay.drawImage(image, 15, 20);
+            scoredisplay.drawImage(text, 40, 20);
+            scoredisplay.scale(150, 75);
+        }
         mainDisplay.drawImage(scoredisplay, (mainDisplay.getWidth() - scoredisplay.getWidth())/2,
                              (mainDisplay.getHeight() - scoredisplay.getHeight())/2);
-        
+                             
         setImage(mainDisplay);
     }
     
     public void updateDisplay(Objects obj)
     {
-        if(obj.getClass().getName() == "Ironman")
+        
+        if(obj.getClass().getName() == "Ironman" || obj.getClass().getName() == "bonusLife")
         {
             score = obj.get_scoreboard().get_numIronManlives();
             imagE = new GreenfootImage("Iron-Man.png");
+            name = "ironman";
         }
         else if(obj.getClass().getName() == "AlienShip")
         {
@@ -61,8 +109,13 @@ public class ScoreDisplay extends Actor
             score = obj.get_scoreboard().get_aliensHitCount();
             imagE = new GreenfootImage("Alien1.png");
         }
+        else if(obj.getClass().getName() == "shot" || obj.getClass().getName() == "bonusShots")
+        {
+            score = obj.get_scoreboard().get_ironManShots();
+            imagE = new GreenfootImage("Bullet1.png");
+        }
         scoredisplay.clear();
-        setImage("red.png");
-        display(score, imagE);    
+        setImage("yellow.png");
+        display(score, imagE, name);    
     }
 }

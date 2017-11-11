@@ -6,19 +6,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Sowmya Gowrishankar) 
  * @version (a version number or a date)
  */
-public class shot extends Actor
+public class shot extends Objects implements Game
 {
     protected GreenfootSound explosionSound;
-    
-    protected int velShot;
+    private ScoreDisplay scoredisplay;
+    //protected int velShot;
     /**
      * Act - do whatever the shot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public shot()
+    public shot(ScoreDisplay display)
     {
+        this.scoredisplay = display;
         explosionSound = new GreenfootSound("explosionNave.wav");
-        velShot = 10;
+        //velShot = 10;
+    }
+    
+    public void act()
+    {
+        move(8);
+        if(isAtEdge())
+        {
+            getWorld().removeObject(this);
+        } 
     }
     
     /**
@@ -30,7 +40,7 @@ public class shot extends Actor
      * Check if the shot touches an enemy, if so both objects are removed
      * Also check if the shot left the world, if so the it is removed
     */
-    public void act() 
+    /*public void act() 
     {        
        Scenario es = (Scenario)getWorld();
        Enemy e = (Enemy)getOneIntersectingObject(Enemy.class);
@@ -93,5 +103,13 @@ public class shot extends Actor
             getWorld().removeObject(this);
        else
             setLocation(getX()+velShot,getY());
+            
+            
+    }*/
+    
+    public void notifyObservers()
+    {
+       get_scoreboard().updateScore(this); 
+       scoredisplay.updateDisplay(this);
     }
 }

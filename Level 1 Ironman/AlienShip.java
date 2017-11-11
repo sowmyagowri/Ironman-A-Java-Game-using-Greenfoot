@@ -18,9 +18,8 @@ public class AlienShip extends Objects implements Game
     public void act() 
     {
         move(-8);
-        if(getX() == 0)
-            getWorld().removeObject(this);
         shoot();
+        removeAlienShip();
     }    
     
     public void shoot()
@@ -33,9 +32,26 @@ public class AlienShip extends Objects implements Game
         }
     }
     
+    public void removeAlienShip()
+    {
+        if(isTouching(shot.class))
+       {
+            //AlienShip as = (AlienShip)getOneIntersectingObject(AlienShip.class);
+            //explosionSound.play();
+            Explosion bomb = new Explosion();
+            getWorld().addObject(bomb, getX(), getY()); 
+            removeTouching(shot.class);
+            //getWorld().addObject(new Boom(), getX(), getY());
+            notifyObservers();
+            System.out.println("Alienshiphit");
+            getWorld().removeObject(this);
+       }
+    }
+    
     public void notifyObservers()
     {
         get_scoreboard().updateScore(this);
+        scoredisplay.updateDisplay(this);
     }
 
 }
