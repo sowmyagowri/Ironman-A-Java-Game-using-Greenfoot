@@ -1,6 +1,15 @@
+# Week 7
+
+In seventh week, the team intehrated all the modules together to make the game work implementing their respective design patterns.
+
+## XP core value Feedback
+
+For integrating the modules together, each team member took feedback from every other member so that the their respective design patterns can be merged with others to make the game. This made possible to construct a desired working model of the game.
+
 # Week 6
 
 In sixth week, the team has almost completed coding their respective modules. I have almost coded my module involving destruction elements of Level 1.
+
 ## XP core value Feedback
 
 Throughout this week, every team member took feedback from others and completed coding their respective modules. Also, we followed short feedback-loops so that all the modules can be integrated together to make the entire game working.
