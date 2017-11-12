@@ -15,6 +15,12 @@ https://drive.google.com/file/d/1bjMX70sNh9_1BQ4XX0StsNQ_9hvtzSZg/view?usp=shari
 BurnDown Chart:
 https://docs.google.com/a/sjsu.edu/spreadsheets/d/1wBbfgccKjMwFemeB587NDkeyNGxnCoAeu6hg_-RYP2k/edit?usp=sharing
 
+## Week 7 (11/11/2017): Minutes of the meeting
+
+1. What did the team do in the past week? : The team finished coding their respective modules in the game. Integration is under process. Some members have finished their individual project deliverables and rest are working on it.
+2. What is the team going to do next week?: We will integrate rest of the modules. Also, each team member will complete their assigned individual project deliverables.
+3. What are the current blockers/challenges the team is facing? : Team did not face any challenges during this week.
+
 ## Week 6 (11/04/2017): Minutes of the meeting
 
 1. What did the team do in the past week? : The team has mostly coded their respective modules in the game.
