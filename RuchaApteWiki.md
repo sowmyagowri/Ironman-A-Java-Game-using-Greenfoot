@@ -1,4 +1,4 @@
-Week 7 (11/04/2017)
+Week 7 (11/11/2017)
 1. Coding for the design pattern was completed. Integration with the other patterns is in process. The menu is integrated with other code and and Level 1 integration is almost done. 
 2. As the integration is taking place, all the team members made sure that the changes do not break the code. This way maintained the Build Integrity In principle.
 
