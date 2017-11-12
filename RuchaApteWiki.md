@@ -1,4 +1,9 @@
-Week 5 (11/04/2017)
+Week 7 (11/04/2017)
+1. Coding for the design pattern was completed. Integration with the other patterns is in process. The menu is integrated with other code and and Level 1 integration is almost done. 
+2. As the integration is taking place, all the team members made sure that the changes do not break the code. This way maintained the Build Integrity In principle.
+
+
+Week 6 (11/04/2017)
 1. I have worked on coding the command pattern for the menu screen that invokes the play command and the help command. Some part of the coding is left which I plan to do in the next week.
 2. Team members check their modules for bugs each time before commiting the code. This maintains the Build Integrity In principle.
 
