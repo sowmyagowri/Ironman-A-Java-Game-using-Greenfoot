@@ -1,0 +1,35 @@
+#BlueJ class context
+comment0.target=Ironman
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ironman\ here.\r\n\ \r\n\ @author\ (Sowmya\ Gowrishankar)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=display0\ display1
+comment1.target=Ironman(ScoreDisplay,\ ScoreDisplay)
+comment1.text=\r\n\ Ironman\ builder\ class.\ Ironman\ images\ are\ loaded,\ variable\ life,\ health,\ and\ points\ are\ initialized.\ Attacks\ sounds\ are\ loaded.\r\n
+comment10.params=state
+comment10.target=void\ setCurrentState(IronmanState)
+comment11.params=
+comment11.target=IronmanState\ getnoShotState()
+comment12.params=
+comment12.target=IronmanState\ gethasShotState()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Ironman\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ move()
+comment4.params=
+comment4.target=void\ attack()
+comment4.text=\r\n\ When\ the\ player\ presses\ the\ spacebar,\ "Ironman"\ will\ launch\ a\ shot.\ \r\n\ Each\ shot\ has\ a\ delay\ of\ 250\ milliseconds.\r\n
+comment5.params=
+comment5.target=void\ isTouchingEnemy()
+comment5.text=\r\n\ Check\ if\ Ironman\ is\ touching\ an\ enemy\ and\ destroys\ it.\r\n
+comment6.params=
+comment6.target=void\ generateBonus()
+comment6.text=\r\n\ Randomly\ generated\ bonus\ throughout\ the\ game.\r\n
+comment7.params=
+comment7.target=void\ notifyObservers()
+comment7.text=public\ int\ getLives()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ return\ lives;\r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ \r\n\ \ \ \ public\ int\ getNumShots()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ return\ numShots;\r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ \r\n\ \ \ \ public\ void\ setNumShots(int\ d)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ numShots\ \=\ d;\r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ \r\n\ \ \ \ public\ void\ setShots()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ numShots\ \=\ 100;\r\n\ \ \ \ }\r\n
+comment8.params=
+comment8.target=void\ getLife()
+comment8.text=\r\n\ Get\ Life\ from\ Observer\r\n
+comment9.params=
+comment9.target=void\ getShots()
+numComments=13

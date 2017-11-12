@@ -22,9 +22,10 @@ public class Menu extends World
     {    
         
         //menu
-        super(1500, 800, 1, false); 
-        bgImageName = "2.jpg";
-        setBackground(bgImageName);
+        super(2000, 1200, 1,false); 
+        GreenfootImage bg = new GreenfootImage("2.jpg");
+        bg.scale(getWidth(),getHeight());
+        setBackground(bg);
         backgroundMusic = new GreenfootSound("Video_Game_Soldiers.mp3");
         buttonPlay = new ButtonPlay();
         buttonHelp = new ButtonHelp();
