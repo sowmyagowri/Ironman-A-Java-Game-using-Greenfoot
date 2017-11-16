@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class ButtonHelp here.
  * 
- * @author (your name) 
+ * @author Rucha Apte 
  * @version (a version number or a date)
  */
 public class ButtonHelp extends Button implements ButtonInvoker
