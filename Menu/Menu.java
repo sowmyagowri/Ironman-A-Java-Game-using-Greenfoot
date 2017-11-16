@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Menu here.
  * 
- * @author (your name) 
+ * @author Rucha Apte
  * @version (a version number or a date)
  */
 public class Menu extends World
@@ -22,7 +22,7 @@ public class Menu extends World
     {    
         
         //menu
-        super(2000, 1200, 1,false); 
+        super(900, 750, 1,false); 
         GreenfootImage bg = new GreenfootImage("2.jpg");
         bg.scale(getWidth(),getHeight());
         setBackground(bg);
@@ -47,8 +47,10 @@ public class Menu extends World
      */
     public void prepare()
     {
-        addObject(buttonPlay, 1200,450);
-        addObject(buttonHelp, 1200,620);
+        //addObject(buttonPlay, 1200,450);
+        //addObject(buttonHelp, 1200,620);
+        addObject(buttonPlay, 588,282);
+        addObject(buttonHelp, 596,496);
         buttonPlay.setCommand(playCmd);
         buttonHelp.setCommand(helpCmd);
         
@@ -59,7 +61,6 @@ public class Menu extends World
                 public void performAction()
                 {
                     if(Greenfoot.mouseClicked(buttonPlay)){
-                        //clicSound.play();
                        Greenfoot.setWorld(new myLevel1());
                     }
             }
@@ -70,16 +71,15 @@ public class Menu extends World
             {
                 public void performAction()
                 {
-                        if(Greenfoot.mouseClicked(buttonHelp)){
-                                //clicSound.play();
-                                Help help = buttonHelp.getHelp();
-                                addObject(help, getWidth()/2, getHeight()/2);
-                                        
-                                addObject(new Back(help), 
-                                                help.getX() - help.getImage().getWidth()/2,
-                                                    help.getY() - help.getImage().getHeight()/2);
-                                
-                            }
+                    if(Greenfoot.mouseClicked(buttonHelp)){
+                            Help help = buttonHelp.getHelp();
+                            addObject(help, getWidth()/2, getHeight()/2);
+                                    
+                            addObject(new Back(help),
+                                help.getX() - help.getImage().getWidth()/2,
+                                help.getY() - help.getImage().getHeight()/2);
+                            
+                        }
                 }
            }
         );

@@ -3,27 +3,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class myLevel1 here.
  * 
- * @author (your name) 
+ * @author Rucha Apte
  * @version (a version number or a date)
  */
 public class myLevel1 extends World
 {
-//    GreenfootSound backgroundMusic = new GreenfootSound("Level1.mp3");
-
     GreenfootSound backgroundMusic = new GreenfootSound("TN.mp3");
-    //private static final String bgImageName = "city5.jpg";    //level1
     private static final String bgImageName = "city1.jpg";    //level1
     private static final double scrollSpeed = 5;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
 
-        //private Ironman ironman;
     private ScoreBoard scorekeeper = new ScoreBoard();
     private ScoreDisplay display2;
     private ScoreDisplay display3;
     private ScoreDisplay display4;
-    private ScoreDisplay display5;
     private int counter = 0;
     //private int totalEnemiesHit = 0;
     //private GreenfootImage total = new GreenfootImage("Total: " + totalEnemiesHit + "/50", 30, Color.BLACK, transparent);
@@ -34,8 +29,7 @@ public class myLevel1 extends World
     public myLevel1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        
-        super(2000, 1000, 1, false);
+        super(800, 600, 1, false);
         setBackground(bgImageName);
         backgroundMusic.playLoop();
         bgImage = new GreenfootImage(getBackground());
@@ -63,8 +57,17 @@ public class myLevel1 extends World
         }
         
         //display5.display(totalEnemiesHit, total, "Total: ");
-        
-        if (Greenfoot.isKeyDown("x")) Greenfoot.setWorld(new myLevel2());
+        if(scorekeeper.get_alienShipsHitCount() + scorekeeper.get_alienSoldierHitCount() + scorekeeper.get_aliensHitCount()== 15 )
+//        if (Greenfoot.isKeyDown("x"))
+        {
+            backgroundMusic.stop();
+            Text LevelChange=new Text();
+            addObject(LevelChange, getWidth()/2, getHeight()/2);
+            LevelChange.setText("CONGRATULATIONS! Get ready for LEVEL 2!!!");
+            Greenfoot.delay(10000);
+            removeObject(LevelChange);
+            Greenfoot.setWorld(new myLevel2());
+        }
 
     }
   
@@ -87,13 +90,13 @@ public class myLevel1 extends World
         Ironman man = new Ironman(display0, display1);
         addObject(man,122,135);
 
-        display2 = new ScoreDisplay(scorekeeper.get_alienShipsHitCount(),new GreenfootImage("Alien-Ship.png"));
+        display2 = new ScoreDisplay(scorekeeper.get_alienShipsHitCount(),new GreenfootImage("Score_ship2.png"));
         addObject(display2, 475,31);
 
-        display3  = new ScoreDisplay(scorekeeper.get_alienSoldierHitCount(),new GreenfootImage("Alien-Sold.png"));
+        display3  = new ScoreDisplay(scorekeeper.get_alienSoldierHitCount(),new GreenfootImage("Score_rocket_enemy.png"));
         addObject(display3, 610,31);
 
-        display4  = new ScoreDisplay(scorekeeper.get_aliensHitCount(),new GreenfootImage("Alien1.png"));
+        display4  = new ScoreDisplay(scorekeeper.get_aliensHitCount(),new GreenfootImage("Score_fireball.png"));
         addObject(display4, 745,31);
         
         /*display5 = new ScoreDisplay(totalEnemiesHit, total, "Total");
@@ -112,7 +115,8 @@ public class myLevel1 extends World
        if(enemyType >= 0)
        {
            theEnemy = theDestructionFactory.selectDestructionElementFactory(enemyType, display2, display3, display4);
-           addObject(theEnemy, 2000, Greenfoot.getRandomNumber(600));           
+           //addObject(theEnemy, 2000, Greenfoot.getRandomNumber(600));           
+           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));           
        }    
     }
 }
