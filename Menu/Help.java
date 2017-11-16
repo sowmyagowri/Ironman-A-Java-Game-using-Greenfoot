@@ -1,5 +1,12 @@
 import greenfoot.*;
 
+/**
+ * Write a description of class Help here.
+ * 
+ * @author Rucha Apte 
+ * @version (a version number or a date)
+ */
+ 
 public class Help extends Actor
 {
     /**
