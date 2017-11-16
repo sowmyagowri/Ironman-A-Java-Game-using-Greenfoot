@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Button to close a window.
  * 
- * @author 
+ * @author Rucha Apte
  * @version (a version number or a date)
  */
 public class Back extends Button
@@ -30,7 +30,6 @@ public class Back extends Button
     public void click()
     {
         if(Greenfoot.mouseClicked(this)){
-            //clickSound.play();
             getWorld().removeObject(actor);
             getWorld().removeObject(this);
         }
