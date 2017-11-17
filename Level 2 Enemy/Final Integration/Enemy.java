@@ -47,13 +47,11 @@ public class Enemy extends Objects
        {
            toRemove=false;
        }
-       else 
+       /*else 
        {
            toRemove=true;  
-           GameOver gameover = new GameOver();
-           getWorld().addObject(gameover, getWorld().getWidth()/2, getWorld().getHeight()/2);
-           Greenfoot.stop();
-       }
+           
+       }*/
    }
     
    public void move()
@@ -77,10 +75,15 @@ public class Enemy extends Objects
     
    s1.setSuccessor(s2);
    s2.setSuccessor(s3);
-   counter=getRandomNumber(20,300);
-   if(counter==100) { s1.setObject(world,e,"OBJECT1"); }
-   if(counter==200) { s1.setObject(world,e,"OBJECT2"); }
-   if(counter==250) { s1.setObject(world,e,"OBJECT3"); }
+   counter=getRandomNumber(20,150);
+   //if(counter>0) counter--;
+   if(counter==30) { s1.setObject(world,e,"OBJECT1"); }
+   if(counter==100) { s1.setObject(world,e,"OBJECT2"); }
+   if(counter==90) { s1.setObject(world,e,"OBJECT3"); }
+   //if(counter%170==149) { s1.setObject(world,e,"OBJECT2"); }
+   //if(counter%170==105) { s1.setObject(world,e,"OBJECT3"); }
+   //if(counter%170==40) { s1.setObject(world,e,"OBJECT2"); }
+   //if(counter==0) counter=170;
    }
    public int getRandomNumber(int start,int end)
    {
@@ -98,7 +101,7 @@ public class Enemy extends Objects
        /*else
        {
             getWorld().removeObject(this);
-        }*/
+       }*/
    }    
    
    public void removeEnemy()
