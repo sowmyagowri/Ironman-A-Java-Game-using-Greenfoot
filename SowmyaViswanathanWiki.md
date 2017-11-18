@@ -1,3 +1,13 @@
+Week#8
+
+We finished integration of all the modules. The tasks in the KANBAN board have been duly updated. Other related documents are being prepared.
+
+XP Core Value: Communication
+
+Week#8
+
+We met several times in the week to communicate the issues faced during the integration part. We were able to solve them and finish our game application. Communication played a key role as it was the one which helped us know the problem, discuss them and arrive at a solution.
+
 Week#7
 
 Integration of different modules was begun. We all sat down to integrate our code. Around 70% of the work is completed. Integration with the levels is remaining.
