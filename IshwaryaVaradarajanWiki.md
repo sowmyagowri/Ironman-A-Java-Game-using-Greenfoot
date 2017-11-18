@@ -39,6 +39,10 @@ Week7 (11/10/2017)
 * Integration of Level 2 scoreboard module with player completed. 
 * Integration of Level 2 scoreboard module enemy module is in progress
 
+Week8 (11/18/2017)
+* Completed Level 2 scoreboard integration with Enemy and level 1 & 2 modules are completed.
+* Sequence Diagram for the project is in progress
+
 Below are the instances that indicate, that the team adopted the 'Eliminate Waste' which is one of the lean core values:
 
 Week1 (09/16/2017)
@@ -62,3 +66,6 @@ Week6 (11/04/2017)
 
 Week7 (11/21/2017)
 1) Integrated the various game modules for level 1 by having team meetings and discussions to avoid confusion and prevented scattered work place or unnecessary movement of people.
+
+Week8 (11/18/2017)
+1) Integrated the game modules for level 2 by having team meetings with developers of the concerned modules to avoid unnecessary movement of people.
