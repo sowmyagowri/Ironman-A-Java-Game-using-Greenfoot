@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Object3
+comment0.text=\n\ Write\ a\ description\ of\ class\ Object3\ here.\n\ \n\ @author\ (Sowmya\ Viswanathan)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=score
+comment1.target=Object3(ScoreDisplay)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=s
+comment3.target=void\ setSuccessor(Handler)
+comment4.params=w\ e\ str
+comment4.target=void\ setObject(greenfoot.World,\ Enemy,\ java.lang.String)
+comment5.params=
+comment5.target=void\ removeObj3()
+comment6.params=
+comment6.target=void\ notifyObservers()
+numComments=7
