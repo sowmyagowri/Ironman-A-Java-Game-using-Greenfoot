@@ -1,3 +1,11 @@
+### Week 7 (ending 11/18/2017):
+
+This week we completed the integration of all the modules. The tasks in the KANBAN board have also been updated. Other related artifacts are being prepared. The use case specification was my individual requirement for this project which is also completed and uploaded on github. The related issue is also now closed.
+
+#### XP core value Simplicity
+
+After we had done the integration, we checked the code and made sure that there are no redundancies in the modules. The code has been maintained as simple as possible from the beginning.
+
 ### Week 7 (ending 11/11/2017):
 
 I completed all the code related to the player module and its interaction with the other objects in the game. All of us met a couple of times during the week to integrate all the modules together. Only a small portion (around 25%) is left to be integrated.
