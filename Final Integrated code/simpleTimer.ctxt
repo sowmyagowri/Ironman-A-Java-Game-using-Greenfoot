@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=simpleTimer
+comment0.text=\n\ Write\ a\ description\ of\ class\ simpleTimer\ here.\n\ \n\ @author\ (Sowmya\ Gowrishankar)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ shot()
+comment2.params=
+comment2.target=int\ millisElapsed()
+comment2.text=\n\ Returns\ the\ amount\ of\ milliseconds\ that\ have\ elapsed\ since\ shot()\n\ was\ last\ called.\ \ This\ timer\ runs\ irrespective\ of\ Greenfoot's\n\ act()\ cycle,\ so\ if\ you\ call\ it\ many\ times\ during\ the\ same\ Greenfoot\ frame,\n\ you\ may\ well\ get\ different\ answers.\n
+numComments=3
