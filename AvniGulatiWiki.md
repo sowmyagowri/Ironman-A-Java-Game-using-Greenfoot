@@ -1,3 +1,11 @@
+# Week 8
+
+During week 8, the team completed the working module of the game. It is ready for the demo.
+
+## XP core value Feedback
+
+Throughout the week, the team took feedback from all team members to make code of the game working. Team followed small feedback-loops for coding and integrating which made the integration process easy and quick.
+
 # Week 7
 
 In seventh week, the team integrated all the modules together to make the game work implementing their respective design patterns.
