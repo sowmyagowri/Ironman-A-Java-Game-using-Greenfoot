@@ -15,7 +15,7 @@ https://www.dropbox.com/s/gys5fja65qkeyqc/CMPE%20202%20-%20Monstars%20CFD_Week%2
 BurnDown Chart:
 https://docs.google.com/a/sjsu.edu/spreadsheets/d/1wBbfgccKjMwFemeB587NDkeyNGxnCoAeu6hg_-RYP2k/edit?usp=sharing
 
-## Week 7 (11/18/2017): Minutes of the meeting
+## Week 8 (11/18/2017): Minutes of the meeting
 
 1. What did the team do in the past week? : The team has completed integrating the game. It is ready for the demo. Project artifacts are under development.
 2. What is the team going to do next week?: Team will complete constructing project artifacts and individual deliverables.
