@@ -10,7 +10,7 @@ Team Wiki:
 5) Sowmya Viswanathan
 
 CFD:
-https://drive.google.com/file/d/1bjMX70sNh9_1BQ4XX0StsNQ_9hvtzSZg/view?usp=sharing
+https://www.dropbox.com/s/gys5fja65qkeyqc/CMPE%20202%20-%20Monstars%20CFD_Week%208.xlsx?dl=0
 
 BurnDown Chart:
 https://docs.google.com/a/sjsu.edu/spreadsheets/d/1wBbfgccKjMwFemeB587NDkeyNGxnCoAeu6hg_-RYP2k/edit?usp=sharing
