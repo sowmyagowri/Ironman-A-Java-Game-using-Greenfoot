@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=noShotState
-comment0.text=\n\ Write\ a\ description\ of\ class\ noShotState\ here.\n\ \n\ @author\ (Sowmya\ Gowrishankar)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=heroObject
-comment1.target=noShotState(Ironman)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ noShotState\n
-comment2.params=display
-comment2.target=void\ attackEnemy(ScoreDisplay)
-numComments=3
