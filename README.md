@@ -7,7 +7,7 @@
 
 **HOW TO START THIS PROJECT:** Download the game and open 'project' file using Greenfoot application.
 
-**AUTHORS:** Avni Gulati, Ishwarya Varadarajan, Rucha Apte, Sowmya Gowrishankar & Sowmya Viswanathan
+**AUTHORS:** [Avni Gulati](https://github.com/avnigulati), [Ishwarya Varadarajan](https://github.com/ishwaryav), [Rucha Apte](https://github.com/ruchaapte), [Sowmya Gowrishankar](https://github.com/sowmyagowri) & [Sowmya Viswanathan](https://github.com/sowmyav27)
 
 ![2](https://user-images.githubusercontent.com/25673997/34020801-13db9cc8-e0eb-11e7-845e-33dd576dbca5.jpg)
 
